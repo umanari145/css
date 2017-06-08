@@ -86,7 +86,43 @@
   align-items:baseline;
 }
 
+.top-max > .flex-item:first-child{
+  padding-top:30px;
+}
+
 .top-bottom{
   align-items:stretch;
+}
 
+.flex-container3{
+  width:300px;
+  height:120px;
+  display:flex;
+  flex-wrap:wrap;
+  border:1px solid #000;
+  background:#00FFFF;
+}
+
+.flex-top-margin{
+  align-content:flex-start;
+}
+
+.flex-bottom-margin{
+  align-content:flex-end;
+}
+
+.flex-middle-margin{
+  align-content:center;
+}
+
+.flex-balance-margin{
+  align-content:space-between;
+}
+
+.flex-balance2-margin{
+  align-content:space-around;
+}
+
+.flex-strech-margin{
+  align-content:strech;
 }
