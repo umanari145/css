@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* line 4, ../sass/sample.scss */
+#main {
+  /** 変数を使うことができる **/
+  width: "50%";
+  background: url("../imgbg.png");
+}
+/* line 9, ../sass/sample.scss */
+#main p {
+  /** 数式を使える  **/
+  font-size: 24px;
+}
+
+/** 条件分岐 **/
+/* line 19, ../sass/sample.scss */
+#main2 {
+  color: red;
+}
+
+/**ループ  **/
+/* line 37, ../sass/sample.scss */
+#main3 {
+  /**10から14まで **/
+  /** 変数を文字で使うときは **/
+  /** 下記のような記法をインターポーションという**/
+}
+/* line 42, ../sass/sample.scss */
+#main3 .fs_10 {
+  font-size: 10px;
+}
+/* line 42, ../sass/sample.scss */
+#main3 .fs_11 {
+  font-size: 11px;
+}
+/* line 42, ../sass/sample.scss */
+#main3 .fs_12 {
+  font-size: 12px;
+}
+/* line 42, ../sass/sample.scss */
+#main3 .fs_13 {
+  font-size: 13px;
+}
+/* line 42, ../sass/sample.scss */
+#main3 .fs_14 {
+  font-size: 14px;
+}
+/* line 46, ../sass/sample.scss */
+#main3 .fs_10 {
+  font-size: 10px;
+}
+/* line 46, ../sass/sample.scss */
+#main3 .fs_11 {
+  font-size: 11px;
+}
+/* line 46, ../sass/sample.scss */
+#main3 .fs_12 {
+  font-size: 12px;
+}
+/* line 46, ../sass/sample.scss */
+#main3 .fs_13 {
+  font-size: 13px;
+}
+/* line 46, ../sass/sample.scss */
+#main3 .fs_14 {
+  font-size: 14px;
+}
+
+/**配列 **/
+/** 最初の#はidの# **/
+/* line 56, ../sass/sample.scss */
+#cat_icon {
+  background: url("cat.png");
+}
+
+/** 最初の#はidの# **/
+/* line 56, ../sass/sample.scss */
+#dog_icon {
+  background: url("dog.png");
+}
+
+/** 最初の#はidの# **/
+/* line 56, ../sass/sample.scss */
+#tiger_icon {
+  background: url("tiger.png");
+}
+
+/** 関数 a**/
+/* line 71, ../sass/sample.scss */
+.grid {
+  float: left;
+  width: 930px;
+}
+
+/** mixin テンプレート的な機能 **/
+/* line 89, ../sass/sample.scss */
+.btn-blue {
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  background-color: #c9c9c9x;
+  color: blue;
+}
+
+/* line 93, ../sass/sample.scss */
+.btn-red {
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  background-color: #c9c9c9x;
+  color: red;
+}
+
+/** 継承  **/
+/* line 99, ../sass/sample.scss */
+#main4, #main5 {
+  background-color: red;
+  color: gray;
+}
+
+/* line 104, ../sass/sample.scss */
+#main5 {
+  border: 1px solid white;
+}
