@@ -1,0 +1,13 @@
+/* line 3, ../sass/sample2.scss */
+p {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-box-shadow: 0 0 10px #a82f34;
+  -webkit-box-shadow: 0 0 10px #a82f34;
+  box-shadow: 0 0 10px #a82f34;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
