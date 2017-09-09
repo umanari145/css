@@ -88,4 +88,14 @@
   color: red;
 }
 
+/** 継承  **/
+#main4, #main5 {
+  background-color: red;
+  color: gray;
+}
+
+#main5 {
+  border: 1px solid white;
+}
+
 /*# sourceMappingURL=hoge.css.map */

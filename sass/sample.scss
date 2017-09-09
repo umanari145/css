@@ -93,3 +93,15 @@ $columnCount:10;
 .btn-red{
   @include auto-color(red);
 }
+
+/** 継承  **/
+
+#main4{
+  background-color:red;
+  color:gray;
+}
+
+#main5{
+  @extend #main4;
+  border:1px solid white;
+}
