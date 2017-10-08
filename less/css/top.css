@@ -6,7 +6,10 @@ footer {
   width: 300px;
   background: #EDF7FF;
 }
-#contens {
+#side_bar {
+  width: 130px;
+}
+#contents {
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
