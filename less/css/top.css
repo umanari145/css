@@ -6,9 +6,6 @@ footer {
   width: 300px;
   background: #EDF7FF;
 }
-#li {
-  list-style-type: none;
-}
 #contens {
   border-radius: 8px;
   -webkit-border-radius: 8px;
