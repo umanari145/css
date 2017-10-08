@@ -1,0 +1,15 @@
+header {
+  width: 200px;
+  background-color: #157;
+}
+footer {
+  width: 300px;
+  background: #EDF7FF;
+}
+#contents {
+  width: 500px;
+  background: #157;
+}
+li {
+  list-style: none;
+}
