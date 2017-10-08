@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>HTML/ヘッダ</title>
+</head>
+<body>
+
+モジュールのコツ
+
+テキスト量を考慮する　※対策はheightをmin-heightにするなど
+<!-- ボタン　ただし高さが増えるとあふれる -->
+<h2 class="heading">
+    <span>これは見出しモジュールです</span>
+</h2>
+
+英数字はあふれることがあるのでword-wrap
+<h2 class="heading">
+    <span>これは見出しモジュールですこれは見出しモジュールですこれは見出しモジュールですこれは見出しモジュールです</span>
+</h2>
+
+<div class="box">
+  <ul clas="list">
+     <li><a href="dummy">これはリストモジュールです。これはリストモジュールです。これはリストモジュールです。これはリストモジュールです。これはリストモジュールです。これはリストモジュールです。</a></li>
+     <li><a href="dummy">http://www.dummy.co.jp/dummy/dummy/dummy/dummy/dummy/dummy/dummy/dummy/dummy/1234567890</a></li>
+  </ul>
+</div>
+
+特定の要素に依存させない(htmlなど)
+<div class="box">
+  <button type="button" class="btn">これはボタンモジュールです</button>
+</div>
+
+
+<button type="button" class="btn">これはボタンモジュールです(button要素)</button>
+<input type="button" class="btn" value="これはボタンモジュールです(input要素)">
+<a href="#" class="btn">これはボタンモジュールです(link要素)</a>
+
+<p></p>
+画像サイズ
+<div class="box2">
+  <div class="box-inner">
+    <img src="hogehoge.jpg" alt="" class="img">
+  </div>
+</div>
+
+※実際には画像があり、これがどこに配置するか
+<a href="dummy" class="link-pdf">これはリンクモジュールです。</a>
+
+</body>
+</html>

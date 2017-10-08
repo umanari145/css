@@ -1,0 +1,124 @@
+.heading{
+	width: 100%;
+	height: 41px;
+	padding: 10px 5px 10px 20px;
+	font-size:16px;
+	color: #333;
+	line-height:1.2;
+	box-sizing:border-box;
+	box-shadow:0 1px 3px #ccc;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	background-image: linear-gradient(to bottom, #fff 0, #f6f6f6 50%, #ededed 100%);
+}
+
+.heading span{
+	position:relative;
+}
+
+
+.heading span::before{
+	width:5px;
+	height:100%;
+	position: absolute;
+	top: 0;
+	left: -10px;
+	border-left: 3px solid #c00;
+	content: '';
+}
+
+.box{
+	padding: 10px;
+	background: #eee;
+}
+
+.list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-bottom: 10px;
+	line-height:1.2;
+}
+
+.list li:last-child{
+    margin-bottom:0;
+}
+
+.list a{
+	color: #333;
+}
+
+
+.box button.btn{
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	display: inline-block;
+	box-shadow: inset 0 1px 0 0 #5bb2de;
+	border: 1px solid #25729a;
+	border-radius: 4px;
+	text-decoration: none;
+	background: linear-gradient(to bottom , #3093c7 5%, #1c5a85 100%);
+}
+
+.box button.btn:hover,
+.box button.btn:focus,
+.box button.btn:active{
+	cursor:pointer;
+	box-shadow: inset 0 0 1px 0 #3a7ea0;
+	background: linear-gradient(to bottom , #1c5a85 5%, #3093c7 100%);
+}
+
+.btn{
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	display: inline-block;
+	box-shadow: inset 0 1px 0 0 #5bb2de;
+	border: 1px solid #25729a;
+	border-radius: 4px;
+	text-decoration: none;
+	background: linear-gradient(to bottom , #3093c7 5%, #1c5a85 100%);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+	cursor:pointer;
+	box-shadow: inset 0 0 1px 0 #3a7ea0;
+	background: linear-gradient(to bottom , #1c5a85 5%, #3093c7 100%);
+}
+
+
+.box2{
+	max-width:600px;
+	min-height:300px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	box-sizing:border-box;
+	border:1px solid #999;
+	background: #eee;
+}
+
+.box2 img{
+	vertical-align:center;
+	/* ‰æ‘œ‚Í100%‚Å */
+	max-width:100%;
+}
+
+.link-pdf{
+	font-size:18px;
+	color: #333;
+}
+
+.link-pdf::after{
+	width:20px;
+	height:24px;
+	margin:0 0 0 4px;
+	display:inline-block;
+    vertical-align:middle;
+    background:url(icon-pdf.png);
+    background-size:20px auto;
+    content:"";
+}
