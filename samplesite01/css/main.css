@@ -22,3 +22,31 @@
   display: flex;
   justify-content: space-around;
 }
+
+.Menu__item {
+  display: block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.EntryPanel {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+
+.EntryPanel__main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.EntryPanel__head {
+  font-weight: bold;
+  font-size: 16px;
+}

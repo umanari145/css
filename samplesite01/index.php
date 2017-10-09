@@ -1,3 +1,6 @@
+<?php
+include_once "header.php";
+?>
 <section>
 <div class="EntryPanel">
 	<div class="EntryPanel__sub">
