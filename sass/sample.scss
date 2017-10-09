@@ -5,10 +5,10 @@ $width:"50%";
   /** 変数を使うことができる **/
   width:$width;
   background:url("#{$imgDir}bg.png");
-  
+
   p{
     /** 数式を使える  **/
-    font-size:#{12+12}px;
+    font-size:#{12+4}px;
   }
 }
 
@@ -22,7 +22,7 @@ $x:10;
   } @else {
     color:green;
   }
-  
+
   p{
     @if $x > 10 {
       color:yellow;

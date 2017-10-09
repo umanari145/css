@@ -1,0 +1,15 @@
+.Header{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 98px;
+    &__head{
+        flex:  1 1 auto;
+        text-align: center;
+    }
+    &__body{
+        flex: 3 1 auto;
+    }
+}

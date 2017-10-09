@@ -1,0 +1,24 @@
+.Header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 98px;
+}
+
+.Header__head {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.Header__body {
+  flex: 3 1 auto;
+}
+
+.Menu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
