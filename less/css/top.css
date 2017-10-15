@@ -9,6 +9,28 @@ footer {
 #side_bar {
   width: 130px;
 }
+.btn {
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  margin: 0
+  padding: 0.3em 1em;
+  text-align: center;
+  line-height: 1;
+  background: #eee;
+  font-style: inherit;
+  color: inherit;
+}
+.btn--short {
+  width: 200px;
+}
+.btn--middle {
+  width: 480px;
+}
+.btn--full {
+  width: 100%;
+}
 #contents {
   border-radius: 8px;
   -webkit-border-radius: 8px;
