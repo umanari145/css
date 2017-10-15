@@ -7,6 +7,15 @@
   width: 130px;
 }
 
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('font-awesome/fonts/fontawesome-webfont.eot');
+	src: url('font-awesome/fonts/fontawesome-webfont.eot?#iefix') format('eot'),
+	 url('font-awesome/fonts/fontawesome-webfont.woff') format('woff'),
+	 url('font-awesome/fonts/fontawesome-webfont.ttf') format('truetype'),
+	 url('font-awesome/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+}
+
 .btn{
 	appearance: none;
 	display: inline-block;
@@ -31,4 +40,136 @@
 
 .btn--full{
 	width: 100%;
+}
+
+/*
+icon画像
+主なcssで定義して、あとは細かいpositionずらし
+*/
+.ui-icon{
+	display: inline-block;
+	background-image: url(sample.png);
+}
+
+.ui-icon-edit{
+	width: 16px;
+	height: 16px;
+	background-position: -0 20px;
+}
+
+.ui-icon-delete{
+	width: 16px;
+	height: 16px;
+	background-position: -0 20px;
+}
+
+
+.nav-icon{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url('aaaa.png');
+}
+
+.nav-icon--home{
+	background-position: 0 0;
+}
+
+.nav-icon--home{
+	background-position: 0 -36px;
+}
+
+/* ここは構造だけ*/
+.font-icon::before{
+	line-height: 1;
+	font-family: 'FontAwesome', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.font-icon--home::before{
+	content: "\f015";
+}
+
+.font-icon--with--text{
+	margin-right: 3px;
+}
+
+.font-icon.with--text{
+	margin-right: 3px;
+}
+
+.heading{
+	border: 1px solid #000;
+	margin-bottom: 0.5em;
+	line-height: 1px;
+	padding: 0 0.6em;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+}
+
+.heading__link{
+	position: absolute;
+	top: 19px;
+	right: 1em;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.media{
+	overflow: hidden;
+}
+
+.media__image{
+	float: left;
+	margin-right: 10px;
+}
+
+.media2{
+	display: table;
+}
+
+.media__image2 > img{
+	display: block;
+}
+
+.media__image2{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.media__body2{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.nav{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+}
+
+.nav__item{
+	display: table-cell;
+}
+
+.nav__item a{
+	display: block;
+	text-decoration: none;
+	color:#fff;
+	text-align: center;
+	background: #49e;
+}
+
+.tableview{
+	overflow: hidden;
+	border: 1px solid #999;
+	border-radius:8px;
+	background-color: #DDD;
+}
+
+.tableview__item{
+	list-style-type: none;
+	border-top:1px solid #EEE;
 }
