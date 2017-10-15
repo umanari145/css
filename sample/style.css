@@ -103,7 +103,6 @@
 
 .box2 img{
 	vertical-align:center;
-	/* �摜��100%�� */
 	max-width:100%;
 }
 
@@ -121,4 +120,63 @@
     background:url(icon-pdf.png);
     background-size:20px auto;
     content:"";
+}
+
+/* 通常のinputをキャンセルする */
+input[type=checkbox]{
+	display: none;
+}
+
+/*この要素は単なるinputとlabel_css*/
+.label_css{
+	/* relativeがないとbefore afterが取れない*/
+	position: relative;
+	/* inline-blockにしなくてもいいがその場合margin,paddingに制限がかかる*/
+	display: inline-block;
+	padding: 0 0 0 42px;
+}
+
+/** 自力で作ったcheckboxの箱**/
+.label_css::after{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  content: '';
+}
+
+/*
+自力で作ったcheckboxのチェックマーク
+通常のブロックの左と下だけに色をつけて
+傾ける。傾きはtransformで実装
+checkされていないときは目に見えないわけだから
+opacity 0
+*/
+.label_css::before{
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  display: block;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #0171bd;
+  border-bottom: 3px solid #0171bd;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*
+checkされたときは外観のpropertyはすべて一緒で
+目に見えるだけにするのでopacity1にする
+*/
+input[type=checkbox]:checked + .label_css:before{
+  opacity: 1;
 }
