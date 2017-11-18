@@ -166,6 +166,40 @@ icon画像
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
+.nav2 {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.nav__item2 {
+  display: table-cell;
+}
+.nav__item2:not(last-child) {
+  border-left: 1px solid #ccc;
+}
+.nav__item2 a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+.active {
+  background: #740804;
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 46%;
+  display: block;
+  border-top: 10px solid #740804;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.no_active {
+  background: #083D17;
+}
 #contents {
   border-radius: 8px;
   -webkit-border-radius: 8px;
