@@ -173,3 +173,27 @@ icon画像
 	list-style-type: none;
 	border-top:1px solid #EEE;
 }
+
+/**ワンポイント下矢印**/
+.arrow3{
+  position: relative;
+  background: #666;
+  font-size: 2rem;
+  width: 200px;
+  a{
+	  display: block;
+	  text-align: center;
+	  padding: 3%;
+  }
+}
+
+.arrow3::after{
+  content: "";
+  position: absolute;
+  bottom:-8px;
+  left:46%;
+  display:block;
+  border-top: 10px solid #666;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
