@@ -90,6 +90,17 @@
 	<li class="tableview__item">リスト</li>
 </ul>
 
+下矢印
+<div class="arrow3">
+	<a href="#">分譲</a>
+</div>
+
+<ul class="nav2">
+	<li class="nav__item2 active"><a href="">home</a></li>
+	<li class="nav__item2 no_active"><a href="">Service</a></li>
+	<li class="nav__item2 no_active"><a href="">About</a></li>
+	<li class="nav__item2 no_active"><a href="">Contact</a></li>
+</ul>
 
 <?php
     include 'footer.php';
