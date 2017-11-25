@@ -1,8 +1,8 @@
 var gulp = require('gulp');
+var less = require('gulp-less');
 
-//通常のタスク(下記コマンドでコピーできる)
-gulp.task('aaaa',function(){
-    return gulp.src([
-       'resource1/*'
-    ]).pipe(gulp.dest('resource2'));
+gulp.task('less',function(){
+    return gulp.src(['less/css/top.less'])
+               .pipe(less())
+               .pipe(gulp.dest('less/css'));
 });
