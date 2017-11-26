@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+<div class="section">
+
+<form action="" method="POST">
+
+	<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+
+		<tr>
+			<th>
+				<label for="type_1">何もないinput</label>
+			</th>
+			<td>
+				<input type="text" name="name" value="">
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1"> class="input"のみ</label>
+			</th>
+			<td>
+				<input type="text" name="name" value="" class="input">
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">columnで囲む</label>
+			</th>
+			<td>
+				<div class="column">
+					<input type="text" name="name" value="" class="input">
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">
+					columnで囲む+filed+control
+				</label>
+			</th>
+			<td>
+				<div class="field-body">
+					<div class="field">
+						<div class="control">
+							<div class="column">
+								<input type="text" name="name" value="" class="input">
+							</div>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+
+	<div class="field is-grouped is-grouped-centered">
+		<p class="control">
+			<input type="submit" class="button is-primary" name="confirm" value="確認">
+		</p>
+		<p class="control">
+			<input type="submit" class="button is-light" id="back" name="back" value="戻る" >
+		</p>
+	</div>
+	</form>
+
+</div>
+</body>

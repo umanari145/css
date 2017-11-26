@@ -11,6 +11,6 @@ gulp.task('original_less',function(){
 
 gulp.task('original_compile',function(){
     return gulp.src(['bulma/sass/main.sass'])
-               .pipe(gulp_sass())
+               .pipe(gulp_sass({outputStyle: 'compressed'}))
                .pipe(gulp.dest('bulma/css'));
 });
