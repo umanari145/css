@@ -14,3 +14,7 @@ gulp.task('original_compile',function(){
                .pipe(gulp_sass({outputStyle: 'compressed'}))
                .pipe(gulp.dest('bulma/css'));
 });
+
+gulp.task('original_compile_watch',function(){
+    return gulp.watch(['bulma/sass/*.*'],['original_compile'])
+});

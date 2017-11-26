@@ -1,5 +1,25 @@
-div.hogehoge{
-	.hogehoge2{
-		font-size:10pt;
+.inline-icon{
+	display:inline-flex;
+    align-items: center;
+    height:2.25em;
+}
+
+.set-width-auto{
+	width:auto;
+}
+
+.under-column{
+    display: block;
+	padding-top:0;
+}
+
+.second-group{
+	display:inline-flex;
+	margin-left:10px;
+}
+
+.multi-pulldown{
+	.inline-pulldown{
+		display:inline-flex;
 	}
 }

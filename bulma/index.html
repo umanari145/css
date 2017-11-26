@@ -59,6 +59,199 @@
 			</td>
 		</tr>
 
+		<tr>
+			<th>
+				<label for="type_1">
+					通常のselect
+				</label>
+			</th>
+			<td>
+				<select name="var">
+					<option value="1">option_1</option>
+					<option value="2">option_2</option>
+					<option value="3">option_3</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">
+					selectにclass="select"追加
+				</label>
+			</th>
+			<td>
+				<select name="var" class="select">
+					<option value="1">option_1</option>
+					<option value="2">option_2</option>
+					<option value="3">option_3</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">
+					div class="select"追加
+				</label>
+			</th>
+			<td>
+				<div class="select">
+					<select name="var">
+						<option value="1">option_1</option>
+						<option value="2">option_2</option>
+						<option value="3">option_3</option>
+					</select>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">
+					column追加
+				</label>
+			</th>
+			<td>
+				<div class="column">
+					<div class="select">
+						<select name="var">
+							<option value="1">option_1</option>
+							<option value="2">option_2</option>
+							<option value="3">option_3</option>
+						</select>
+					</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label for="type_1">
+					column追加+filed+control
+				</label>
+			</th>
+			<td>
+				<div class="field">
+					<div class="control">
+						<div class="column">
+							<div class="select">
+								<select name="var">
+									<option value="1">option_1</option>
+									<option value="2">option_2</option>
+									<option value="3">option_3</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<div class="field-label">
+					<label for="type_1">labelをfield-labelで囲む</label>
+				</div>
+			</th>
+			<td>
+				<div class="column">
+					<input type="text" name="name" value="" class="input">
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<div class="field-label">
+					<label for="type_1">住所タイプ</label>
+				</div>
+			</th>
+			<td>
+				<div class="address-part1">
+					<div class="column">
+						<span class="inline-icon">〒</span>
+						<input type="text" name="zip" value="" class="input set-width-auto">
+						<input type="button" class="button is-primary" name="confirm" value="住所確認">
+					</div>
+					<div class="column under-column">
+						<input type="text" name="address" value="" class="input">
+					</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<div class="field-label">
+					<label for="type_1">役職</label>
+				</div>
+			</th>
+			<td>
+				<div class="yakushoku">
+					<div class="column">
+						<span class="inline-icon">役職</span>
+
+						<div class="select multi-pulldown">
+							<select name="var" class="inline-pulldown">
+								<option value="1">option_1</option>
+								<option value="2">option_2</option>
+								<option value="3">option_3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="column under-column">
+						<input type="text" name="name1" value="" class="input set-width-auto">
+						<div class="second-group">
+							<span class="inline-icon">カナ&nbsp</span>
+							<input type="text" name="name2" value="" class="input set-width-auto ">
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<div class="field-label">
+					<label for="type_1">ダブルプルダウン1</label>
+				</div>
+			</th>
+			<td>
+				<div class="">
+					<div class="column">
+						<div class="select multi-pulldown">
+							<select name="var" class="inline-pulldown">
+								<option value="1">option_1</option>
+								<option value="2">option_2</option>
+								<option value="3">option_3</option>
+							</select>
+						</div>
+
+						<div class="select multi-pulldown">
+							<span class="inline-icon">(</span>
+							<select name="var" class="count inline-pulldown">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<span class="inline-icon">)</span>
+						</div>
+
+						<div class="select multi-pulldown">
+							<select name="var" class="inline-pulldown">
+								<option value="1">option_1</option>
+								<option value="2">option_2</option>
+								<option value="3">option_3</option>
+							</select>
+						</div>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+
 	</table>
 
 	<div class="field is-grouped is-grouped-centered">
