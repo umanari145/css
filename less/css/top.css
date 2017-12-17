@@ -19,8 +19,8 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid #000;
-  margin: 0
-	padding: 0.3em 1em;
+  margin: 0;
+  padding: 0.3em 1em;
   text-align: center;
   line-height: 1;
   background: #eee;
@@ -139,10 +139,18 @@ icon画像
   border: 1px solid #999;
   border-radius: 8px;
   background-color: #DDD;
+  position: absolute;
 }
 .tableview__item {
   list-style-type: none;
+  height: 20px;
   border-top: 1px solid #EEE;
+}
+.tableview__target {
+  position: relative;
+}
+.tableview__target-icon {
+  position: absolute;
 }
 /**ワンポイント下矢印**/
 .arrow3 {

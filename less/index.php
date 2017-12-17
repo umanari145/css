@@ -84,8 +84,9 @@
 	<li class="nav__item"><a href="">Contact</a></li>
 </ul>
 
+センタリングされたアイコン
 <ul class="tableview">
-	<li class="tableview__item">リスト</li>
+	<li class="tableview__item"><a href="#" class="targetview__target">リンク<span class="tableview__target-icon icon ico--arrow"></span></a></li>
 	<li class="tableview__item">リスト</li>
 	<li class="tableview__item">リスト</li>
 </ul>
@@ -101,6 +102,9 @@
 	<li class="nav__item2 no_active"><a href="">About</a></li>
 	<li class="nav__item2 no_active"><a href="">Contact</a></li>
 </ul>
+
+
+
 
 <?php
     include 'footer.php';
