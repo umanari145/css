@@ -84,10 +84,10 @@
 	<li class="nav__item"><a href="">Contact</a></li>
 </ul>
 
-縦センタリングされたアイコン
+縦センタリングされたアイコン positionとflex
 <ul class="tableview">
-	<li class="tableview__item"><a href="#" class="tableview__target">リンク<span class="tableview__target-icon ico ico--arrow"></span></a></li>
-	<li class="tableview__item">リスト</li>
+	<li class="tableview__item"><a href="#" class="tableview__target">リスト<span class="tableview__target-icon ico ico--arrow"></span></a></li>
+	<li class="tableview__item2"><a href="#" class="tableview__target">リスト</a><span class="tableview__target-icon2 ico ico--arrow"></span></li>
 	<li class="tableview__item">リスト</li>
 </ul>
 

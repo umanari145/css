@@ -143,8 +143,15 @@ icon画像
 .tableview__item {
   list-style-type: none;
   height: 40px;
-  vertical-align: middle;
   border-top: 1px solid #EEE;
+}
+.tableview__item2 {
+  list-style-type: none;
+  height: 40px;
+  border-top: 1px solid #EEE;
+  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .ico {
   display: inline-block;
@@ -155,6 +162,8 @@ icon画像
   height: 16px;
 }
 .tableview__target {
+  display: inline-block;
+  height: 40px;
   position: relative;
 }
 .tableview__target-icon {
