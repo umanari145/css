@@ -139,18 +139,28 @@ icon画像
   border: 1px solid #999;
   border-radius: 8px;
   background-color: #DDD;
-  position: absolute;
 }
 .tableview__item {
   list-style-type: none;
-  height: 20px;
+  height: 40px;
+  vertical-align: middle;
   border-top: 1px solid #EEE;
+}
+.ico {
+  display: inline-block;
+  background: url(../img/spritesheets.png);
+}
+.ico--arrow {
+  width: 16px;
+  height: 16px;
 }
 .tableview__target {
   position: relative;
 }
 .tableview__target-icon {
   position: absolute;
+  top: 50%;
+  margin-top: -8px;
 }
 /**ワンポイント下矢印**/
 .arrow3 {
