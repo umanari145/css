@@ -1,3 +1,43 @@
+.centering {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.underborder {
+  position: relative;
+}
+.underborder::before,
+.underborder::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #000;
+}
+.underborder::after {
+  bottom: 5px;
+}
+.article_title {
+  font-size: 4rem;
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+.article_title::before,
+.article_title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #000;
+}
+.article_title::after {
+  bottom: 5px;
+}
 header {
   width: 100%;
   background: #000;
@@ -57,16 +97,14 @@ header .button_area .send_message {
   border: 1px solid #D29E0D;
   background: #D29E0D;
 }
-.works {
-  width: 100%;
-  background: #383634;
-}
-.works .article_title {
-  font-size: 4rem;
-  width: 10%;
+.about .text_area p {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+.works {
+  width: 100%;
+  background: #383634;
 }
 .works .link_block {
   width: 100%;
@@ -90,4 +128,26 @@ header .button_area .send_message {
 .works .link_block .tree {
   background-image: url('../img/tree.jpg');
   background-size: cover;
+}
+.skill .icon_area_block {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+  display: table;
+  table-layout: fixed;
+}
+.skill .icon_area_block .icon_area {
+  text-align: center;
+  display: table-cell;
+}
+.skill .icon_area_circule {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #000;
+  border-radius: 50%;
 }

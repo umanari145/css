@@ -1,5 +1,33 @@
 // out: style.css
 
+.centering{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.underborder{
+	position: relative;
+	&::before,&::after{
+		content:'';
+		position: absolute;
+		left:0;
+		right:0;
+		bottom: 0;
+		border-bottom:1px solid #000;
+	}
+	&::after{
+		bottom:5px;
+	}
+}
+
+.article_title {
+	font-size: 4rem;
+	width: 10%;
+	.centering;
+	.underborder
+}
+
 header {
 	width: 100%;
 	background: #000;
@@ -71,17 +99,17 @@ header {
 	}
 }
 
+.about{
+	.text_area{
+		p{
+			.centering;
+		}
+	}
+}
+
 .works {
 	width: 100%;
 	background: #383634;
-
-	.article_title {
-		font-size: 4rem;
-		width: 10%;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-	}
 
 	.link_block {
 		width: 100%;
@@ -106,6 +134,28 @@ header {
 			background-image: url('../img/tree.jpg');
 			background-size: cover;
 		}
+	}
+}
 
+.skill{
+
+	.icon_area_block{
+		.centering;
+		width:80%;
+		display: table;
+		table-layout: fixed;
+		.icon_area{
+			text-align: center;
+			display: table-cell;
+		}
+	}
+
+	.icon_area_circule{
+		.centering;
+		width: 30px;
+		height: 30px;
+		line-height: 28px;
+		border:1px solid #000;
+		border-radius: 50%;
 	}
 }

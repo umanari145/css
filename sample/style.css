@@ -180,3 +180,26 @@ checkされたときは外観のpropertyはすべて一緒で
 input[type=checkbox]:checked + .label_css:before{
   opacity: 1;
 }
+
+/*
+rightととleftを0にすることでwidth100%を表記できる
+*/
+
+.article_title{
+	position: relative;
+}
+
+.article_title::before, .article_title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #000;
+}
+
+.article_title::after{
+    bottom:5px;
+}
+
+.
