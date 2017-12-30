@@ -129,11 +129,19 @@ header .button_area .send_message {
   width: 100%;
   height: 50%;
   text-align: center;
+  z-index: 1;
 }
 .works .link_block .single_area .work_inner .text-area {
+  width: 100%;
+  height: 100%;
+  display: table;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+.works .link_block .single_area .work_inner .text-area p {
+  display: table-cell;
+  vertical-align: middle;
 }
 .works .link_block .single_area a {
   color: #fff;
