@@ -1,56 +1,76 @@
 // out: style.css
-html{
+
+html {
 	font-size: 62.5%;
 }
 
-a:link, a:visited, a:hover,a:active{
-	text-decoration:none;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-li{
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+li {
 	list-style-type: none;
 }
 
-.centering{
+.centering {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
 
-header{
-	.logo{
-		width:225px;
-		height:56px;
+.clearfix::after {
+	content:'';
+	display: block;
+	clear: both;
+}
+
+
+header {
+	.logo {
+		width: 225px;
+		height: 56px;
 		.centering;
-		a,img{
+
+		a,
+		img {
 			display: block;
-			width:100%;
+			width: 100%;
 			height: 100%;
 		}
-		a:hover{
+
+		a:hover {
 			opacity: 0.3;
 		}
 	}
 
-	.global_menu{
+	.global_menu {
 		.centering;
 
-		.nav_item{
+		.nav_item {
 			display: inline-block;
 			margin: 0 10px;
 
-			a{
+			a {
 				display: inline-block;
 				width: 100px;
 				height: 30px;
 				line-height: 30px;
-				color:#666;
+				color: #666;
 				border-radius: 3px;
 				vertical-align: middle;
 				.centering;
-				&:hover{
+
+				&:hover {
 					text-decoration: underline;
-					opacity:0.7;
+					opacity: 0.7;
 					transition: all 0.3s;
 					background-color: #d03c56;
 				}
@@ -59,45 +79,150 @@ header{
 	}
 }
 
-.wrapper{
+.wrapper {
+	.sub_title {
+		text-align: left;
+	}
+
+	.midashi {
+		border-left: 2px solid #ff0000;
+		text-align: left;
+		padding-left: 10px;
+	}
+
 	width: 1080px;
-	overflow: hidden;
-	.side_contents{
-		float:right;
-		ul{
+	.centering;
+
+	.main_contents{
+		width: 660px;
+		float: left;
+
+		.main_visual{
+			width: 100%;
+			.hot-topic{
+				width: 50%;
+				float: left;
+			}
+			.main_catch{
+				float: left;
+				display: inline-block;
+				background-color: #2d3d54;
+				height:300px;
+				width: 50%;
+				padding: 100px 0 0;
+				position: relative;
+			}
+		}
+
+		.news{
+			text-align: left;
+			width: 100%;
+			.scroll-item{
+				padding:3px 5px;
+			}
+			.category{
+				display: inline-block;
+				background: #fffacd;
+				margin: 2px 5px;
+				padding: 6px;
+				border-radius: 5px;
+			}
+		}
+
+		.articles{
+			.article-item{
+				width: 48%;
+				height:250px;
+				display: block;
+				&:nth-of-type(odd){
+					float: left;
+				}
+				&:nth-of-type(even){
+					float: right;
+				}
+				margin-bottom: 30px;
+				box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+
+
+
+	.side_contents {
+		float: right;
+		ul {
 			margin: 0;
 			padding: 0;
-			li{
-				a{
-					display: block;
-					vertical-align: middle;
-				}
-				.ranking_img{
-					width: 55px;
-					height: 55px;
-					margin-right: 10px;
-				}
+		}
 
-				.one_point{
-					display: inline-block;
-					width: 20px;
-					height: 20px;
-					text-align: center;
-					line-height: 20px;
-					background-color: #000;
-					vertical-align: 20px;
-					color:#fff;
-					transform: rotate(45deg);
-				}
+		.ranking {
+			a {
+				display: block;
+				vertical-align: middle;
+			}
 
-				.ranking_contents{
-					margin-top:0;
-					margin-left: 10px;
-					vertical-align: top;
+			.ranking_img {
+				width: 55px;
+				height: 55px;
+				margin-right: 10px;
+			}
+
+			.one_point {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				background-color: #000;
+				vertical-align: 20px;
+				color: #fff;
+				transform: rotate(45deg);
+
+				&::before {
+					content: '1';
 					display: inline-block;
-					width: 182px;
-					font-size: 1.0rem;
+					transform: rotate(-45deg);
 				}
+			}
+
+			.ranking_contents {
+				margin-top: 0;
+				margin-left: 10px;
+				vertical-align: top;
+				display: inline-block;
+				width: 182px;
+				font-size: 1.0rem;
+			}
+		}
+
+		.document_list a{
+			margin-left: 5px;
+			display: block;
+			text-align: left;
+			padding-left: 12px;
+			background: url('../img/arrow.gif') no-repeat left center;
+			&:hover{
+				opacity: 0.6;
+				text-decoration: underline;
+			}
+		}
+
+		.search_box{
+			padding: 15px;
+			text-align: left;
+			.search_word{
+				width: 200px;
+				height: 26px;
+				float: left;
+			}
+			.search_button{
+				width: 40px;
+				height: 26px;
+				border: none;
+				float: left;
+				padding:3px;
+				border-radius: 0 10px 10px 0;
+				background:#d03c56;
 			}
 		}
 
