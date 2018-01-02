@@ -1,0 +1,67 @@
+// expanded: $1.css
+@import "base.scss";
+
+header {
+	height: 100px;
+	background: #d85;
+	padding-top: 10px;
+	position: relative;
+	.logo {
+		width: 960px;
+		@include centering;
+		.main_head{
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		width: 100%;
+		height: 5px;
+		background: url(../img/bg_giza.png) repeat-x;
+	}
+
+}
+
+.wrapper {
+	width: 980px;
+	.sidecontents{
+		width: 300px;
+		float: right;
+		.main_visual{
+			width: 100%;
+			display: block;
+			img{
+				display: block;
+				width: 300px;
+				height: 250px;
+			}
+		}
+		.latest{
+			margin-top: 10px;
+			background: #868;
+			text-align: center;
+			height: 50px;
+			padding: 10px 0;
+			.icon{
+				vertical-align: middle;
+				display: inline-block;
+				width: 26px;
+				height: 26px;
+				margin-right: 10px;
+				background: url(../img/ico_2column.png) no-repeat;
+			}
+		}
+		.latest_contents_block{
+			li{
+				padding: 5px;
+				.link_area{
+					display: block;
+					border-bottom: 1px solid #ddd;
+				}
+			}
+		}
+	}
+}
