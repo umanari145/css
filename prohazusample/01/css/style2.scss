@@ -1,0 +1,141 @@
+// expanded: $1.css
+@import "base.scss";
+
+
+.icon{
+	display: inline-block;
+	width: 45px;
+	height: 30px;
+	vertical-align: middle;
+	background:url('../img/ico_multi.png') no-repeat;
+}
+
+.icon2{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	background:url('../img/ico_multi.png') no-repeat;
+}
+
+
+header {
+	height: 100px;
+	background: #246;
+	padding-top: 10px;
+	position: relative;
+	.logo {
+		float: left;
+		width: 190px;
+		@include centering;
+		.main_head{
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+	.gnav{
+		float: right;
+		ul{
+			display: inline-block;
+			li{
+				display: inline-block;
+				margin-right: 10px;
+				a{
+					display: inline-block;
+					background: #fff;
+					color: #246;
+					width: 70px;
+					padding: 5px 0;
+					&:hover{
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+
+		.cart_block{
+			display: inline-block;
+			margin-left: 10px;
+			background: #246;
+			border: 2px solid #fff;
+			a{
+				width: 140px;
+				color:#fff;
+				display: inline-block;
+				padding: 10px 2px;
+				&:hover{
+					background: #fff;
+					color:#246;
+					transition: all 0.3s;
+					.cart_icon{
+						background-position: 23px -30px;
+						transition: all 0.3s;
+					}
+				}
+
+				.cart_icon{
+					background-position: -17px -30px;
+				}
+			}
+		}
+
+
+
+	}
+
+
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		width: 100%;
+		height: 5px;
+		background: url(../img/bg_giza.png) repeat-x;
+		background-position: 0 -60px;
+	}
+}
+
+.wrapper {
+	width: 980px;
+
+	.sidecontents{
+		width: 180px;
+		float: left;
+
+		.category_list{
+			a{
+				display: block;
+				padding: 10px 0 10px 30px;
+				&:hover{
+					opacity: 0.8;
+				}
+			}
+			.book_icon{
+				margin-right: 10px;
+				background-position: 0 0px;
+			}
+			background: #C0C0C0;
+			margin-bottom: 1px;
+		}
+
+		.icon_block{
+			width: 100%;
+			.icon_list{
+				display: inline-block;
+				width: 23%;
+				a{
+					display: inline-block;
+					@include centering;
+					width: 100%;
+					background: #C0C0C0;
+					&:hover{
+						.twitter-icon{
+							background-position: 0px 0px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

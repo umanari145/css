@@ -1,0 +1,174 @@
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.icon {
+  display: inline-block;
+  width: 45px;
+  height: 30px;
+  vertical-align: middle;
+  background: url("../img/ico_multi.png") no-repeat;
+}
+
+.icon2 {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  background: url("../img/ico_multi.png") no-repeat;
+}
+
+header {
+  height: 100px;
+  background: #246;
+  padding-top: 10px;
+  position: relative;
+}
+
+header .logo {
+  float: left;
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header .logo .main_head {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header .gnav {
+  float: right;
+}
+
+header .gnav ul {
+  display: inline-block;
+}
+
+header .gnav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header .gnav ul li a {
+  display: inline-block;
+  background: #fff;
+  color: #246;
+  width: 70px;
+  padding: 5px 0;
+}
+
+header .gnav ul li a:hover {
+  opacity: 0.6;
+}
+
+header .gnav .cart_block {
+  display: inline-block;
+  margin-left: 10px;
+  background: #246;
+  border: 2px solid #fff;
+}
+
+header .gnav .cart_block a {
+  width: 140px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 2px;
+}
+
+header .gnav .cart_block a:hover {
+  background: #fff;
+  color: #246;
+  transition: all 0.3s;
+}
+
+header .gnav .cart_block a:hover .cart_icon {
+  background-position: 23px -30px;
+  transition: all 0.3s;
+}
+
+header .gnav .cart_block a .cart_icon {
+  background-position: -17px -30px;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background: url(../img/bg_giza.png) repeat-x;
+  background-position: 0 -60px;
+}
+
+.wrapper {
+  width: 980px;
+}
+
+.wrapper .sidecontents {
+  width: 180px;
+  float: left;
+}
+
+.wrapper .sidecontents .category_list {
+  background: #C0C0C0;
+  margin-bottom: 1px;
+}
+
+.wrapper .sidecontents .category_list a {
+  display: block;
+  padding: 10px 0 10px 30px;
+}
+
+.wrapper .sidecontents .category_list a:hover {
+  opacity: 0.8;
+}
+
+.wrapper .sidecontents .category_list .book_icon {
+  margin-right: 10px;
+  background-position: 0 0px;
+}
+
+.wrapper .sidecontents .icon_block {
+  width: 100%;
+}
+
+.wrapper .sidecontents .icon_block .icon_list {
+  display: inline-block;
+  width: 23%;
+}
+
+.wrapper .sidecontents .icon_block .icon_list a {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  background: #C0C0C0;
+}
+
+.wrapper .sidecontents .icon_block .icon_list a:hover .twitter-icon {
+  background-position: 0px 0px;
+}
