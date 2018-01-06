@@ -1,15 +1,24 @@
 .Header{
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 98px;
-    &__head{
-        flex:  1 1 auto;
-        text-align: center;
-    }
-    &__body{
-        flex: 3 1 auto;
-    }
+
+	@include flex;
+	justify-content: flex-start;
+	height: 98px;
+	align-items:center;
+	&__head{
+		background: #fff;
+		flex: 1 1 auto;
+	}
+
+	&__body{
+		flex: 3 1 auto;
+		.Menu{
+			@include flex;
+			justify-content: space-around;
+			&__item{
+				display: block;
+				padding: 10px 15px;
+
+			}
+		}
+	}
 }

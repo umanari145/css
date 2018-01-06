@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title></title>
 </head>
 <body>
 
@@ -12,9 +13,9 @@
 </html>
 <header class="Header">
 
-  <div class="Header__head">
-    <h1>Site Name</h1>
-  </div>
+	<div class="Header__head">
+		<h1>Site Name</h1>
+	</div>
 
   <nav class="Header__body">
     <ul class="Menu">
