@@ -37,6 +37,10 @@ li {
   flex: 1 1 auto;
 }
 
+.Header__head h1 {
+  text-align: center;
+}
+
 .Header__body {
   flex: 3 1 auto;
 }
@@ -50,5 +54,26 @@ li {
 
 .Header__body .Menu__item {
   display: block;
+  text-align: center;
   padding: 10px 15px;
+}
+
+.Item_block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.EntryPanel {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.EntryPanel__main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-content: space-around;
 }

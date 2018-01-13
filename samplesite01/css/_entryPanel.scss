@@ -1,32 +1,16 @@
-.EntryPanel{
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    align-items: center;
-    &__main{
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        flex:1 1 50%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-self: stretch;
-    }
-    &__head{
-        font-weight: bold;
-        font-size: 16px;
-    }
-    &__body{
-        margin-top: 10px;
-        font-size: 10px;
-    }
-    &__thumb{
-        width: 100%;
-        margin-right: 20px;
-    }
-    &__foot{
-        margin-top: 10px;
-        text-align: right;
-    }
 
+.Item_block{
+	@include flex;
+	flex-wrap: wrap;
+}
+
+.EntryPanel{
+	@include flex;
+	&__sub{
+	}
+
+	&__main{
+		@include flex;
+		align-content: space-around;
+	}
 }

@@ -7,6 +7,9 @@
 	&__head{
 		background: #fff;
 		flex: 1 1 auto;
+		h1{
+			text-align: center;
+		}
 	}
 
 	&__body{
@@ -16,6 +19,7 @@
 			justify-content: space-around;
 			&__item{
 				display: block;
+				text-align: center;
 				padding: 10px 15px;
 
 			}
