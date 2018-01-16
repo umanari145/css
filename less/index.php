@@ -103,8 +103,18 @@
 	<li class="nav__item2 no_active"><a href="">Contact</a></li>
 </ul>
 
+<p>下orその他の方向向き矢印など</p>
+<p>通常の文字など</p>
+<span class="str">hogehoge</span>
 
-
+<p>select</p>
+<label>
+<select class="select01">
+	<option>選択肢01</option>
+	<option>選択肢02</option>
+	<option>選択肢03</option>
+</select>
+</label>
 
 <?php
     include 'footer.php';
