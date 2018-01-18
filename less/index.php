@@ -108,7 +108,7 @@
 <span class="str">hogehoge</span>
 
 <p>select</p>
-<label>
+<label class="select_icon">
 <select class="select01">
 	<option>選択肢01</option>
 	<option>選択肢02</option>
