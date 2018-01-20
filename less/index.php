@@ -110,12 +110,21 @@
 <p>select</p>
 <label class="select_icon">
 <select class="select01">
-	<option>選択肢01</option>
-	<option>選択肢02</option>
+	<option>本日は晴天なり</option>
+	<option>本日は晴天なり本日は晴天なり</option>
 	<option>選択肢03</option>
 </select>
 </label>
 
+
+<p>select</p>
+<label class="select_icon">
+<select class="select01">
+	<option>本日は晴天なり</option>
+	<option>本日は晴天なり本日は晴天なり</option>
+	<option>選択肢03</option>
+</select>
+</label>
 <?php
     include 'footer.php';
 ?>

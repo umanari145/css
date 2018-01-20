@@ -294,23 +294,42 @@ icon画像
 	transform: rotate(-135deg);
 }
 
-.select_icon{
-	position: relative;
+.select01{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	outline:none;
+	padding: 5px 40px 5px 5px;
+}
+
+.select_icon{
+	position: relative;
+}
+
+.select_icon::before{
+	content:'';
+	display: block;
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	margin-top: -4px;
+	top:50%;
+	right:10px;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	transform: rotate(45deg);
 }
 
 .select_icon::after{
 	content:'';
 	display: block;
 	position: absolute;
-	width: 10px;
-	height: 10px;
-	margin-top: -5px;
+	width: 5px;
+	height: 5px;
+	margin-top: 4px;
 	top:50%;
-	right:2px;
-	border-top: 1px solid #000;
+	right:10px;
 	border-right: 1px solid #000;
-	transform: rotate(-45deg);
+	border-bottom:  1px solid #000;
+	transform: rotate(45deg);
 }
