@@ -4,6 +4,15 @@
     <title>image font</title>
 <style>
 
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
 div#image02, div#image03, div#image04{
 	width: 500px;
 }
@@ -105,6 +114,16 @@ div.font02{
 .sub_contents4{
   display: inline-block;
   width: 20%;
+}
+
+.reika_bg{
+	width: 60%;
+	background-image: url('reika.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	border: 1px solid #000;
+	/* 背景画像が3:2だが幅が親の60%になるのでこれを比で割って40%にすると均等になる*/
+	padding-top:40%;
 }
 
 </style>
@@ -217,6 +236,12 @@ div.font02{
 			</p>
 		</div>
 
+		<p>
+			padding%を使ってjsなしで縦横比を揃える
+			画像を背景画像を使って常に比率を制御できる
+			背景画像が3:2だが幅が親の60%(width:60%)になるのでこれを比で割ってpadding-top:40%にすると均等になる
+		</p>
+		<div class="reika_bg"></div>
 
 		<footer>
 
