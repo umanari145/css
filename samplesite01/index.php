@@ -15,7 +15,7 @@
 
 	<div class="EntryPanel">
 		<div class="EntryPanel__sub">
-			<img class="EntryPanel__thumb" src="">
+			<img class="EntryPanel__thumb" src="./images/top/entry2.jpg">
 		</div>
 
 		<div class="EntryPanel__main">
