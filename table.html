@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <meta charset="UTF-8">
+    <title>table</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+    <body>
+		<p>tableの幅指定がない時。autoでもfixedでも変化なし。基本内包要素依存<p>
+		<table class="main_table">
+			<thead>
+				<tr>
+					<th>名前</th>
+					<th>生年月日</th>
+					<th>住所</th>
+					<th>趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ヤマダ太郎</td>
+					<td>1991/12/31</td>
+					<td>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td>動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>500px auto 内包要素に依存<p>
+		<table class="main_table" style="width:500px;">
+			<thead>
+				<tr>
+					<th>名前</th>
+					<th>生年月日</th>
+					<th>住所</th>
+					<th>趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ヤマダ太郎</td>
+					<td>1991/12/31</td>
+					<td>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td>動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>500px fixed 均等<p>
+		<table class="main_table width" style="width:500px; table-layout:fixed;">
+			<thead>
+				<tr>
+					<th>名前</th>
+					<th>生年月日</th>
+					<th>住所</th>
+					<th>趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ヤマダ太郎</td>
+					<td>1991/12/31</td>
+					<td>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td>動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>
+			幅指定なし auto fixed変わらず thに幅指定%ありそれに依存 幅がオーバーした場合は最初のもの(左側のもの)が優先になる？
+		<p>
+		<table class="main_table">
+			<thead>
+				<tr>
+					<th class="th1">名前</th>
+					<th class="th2">生年月日</th>
+					<th class="th3">住所</th>
+					<th class="th4">趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td1">ヤマダ太郎</td>
+					<td class="td2">1991/12/31</td>
+					<td class="td3">345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td class="td4">動画鑑賞、バスケット、野球観戦、ダイエット、読書、動画作成</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>500px th tdに幅して%あり autoだとうまくコントロールできるがfixedだとだめ。これも左が優先度あり<p>
+		<table class="main_table" style="width:500px;">
+			<thead>
+				<tr>
+					<th class="th1">名前</th>
+					<th class="th2">生年月日</th>
+					<th class="th3">住所</th>
+					<th class="th4">趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ヤマダ太郎</td>
+					<td>1991/12/31</td>
+					<td>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td>動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>
+			幅指定なし auto fixed変わらず thに数値幅指定あり　内部要素が有るためうまく決まらない
+		<p>
+		<table class="main_table">
+			<thead>
+				<tr>
+					<th class="th01">名前</th>
+					<th class="th02">生年月日</th>
+					<th class="th03">住所</th>
+					<th class="th04">趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ヤマダ太郎</td>
+					<td>1991/12/31</td>
+					<td>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td>動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>
+			上記と同じパターンでtdに幅指定をするとうまくコントロールできる。fixed auto変わらず
+		<p>
+		<table class="main_table">
+			<thead>
+				<tr>
+					<th class="th01">名前</th>
+					<th class="th02">生年月日</th>
+					<th class="th03">住所</th>
+					<th class="th04">趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td1"><span>ヤマダ太郎</span></td>
+					<td class="td2"><span>1991/12/31</span></td>
+					<td class="td3"><span>345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</span></td>
+					<td class="td4"><span>動画鑑賞、バスケット、野球観戦、ダイエット</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>500px th tdに幅して数値幅あり。fixed時有効だがtdの幅が優先され500を超える<p>
+		<table class="main_table" style="width:500px;">
+			<thead>
+				<tr>
+					<th class="th01">名前</th>
+					<th class="th02">生年月日</th>
+					<th class="th03">住所</th>
+					<th class="th04">趣味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td1">ヤマダ太郎</td>
+					<td class="td2">1991/12/31</td>
+					<td class="td3">345-9876　東京都中央区1-1-1 サンプルビル2Fビル2F</td>
+					<td class="td4">動画鑑賞、バスケット、野球観戦、ダイエット</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.main_table{
+	table-layout: auto;
+	border-collapse: collapse;
+	border:1px solid #000;
+}
+
+.main_table th,.main_table td{
+	border:1px solid #000;
+}
+
+.th1,.th3{
+	width: 25%;
+}
+
+.th2,.th4{
+	width: 30%;
+}
+
+.th01,.th03{
+	width: 125px;
+}
+
+.th02,.th04{
+	width: 150px;
+}
+
+
+.td1,.td3{
+	width: 125px;
+}
+
+.td2,.td4{
+	width: 150px;
+}
