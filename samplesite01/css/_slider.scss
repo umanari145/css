@@ -1,0 +1,49 @@
+.ImageSlide{
+	display: flex;
+	position: relative;
+	overflow: hidden;
+
+	&__main{
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	&__item{
+		//growは余白がありえないので１を入れても挙動が変わらない
+		//shinkは0にしないと縮んでしまい80%にならない
+		//ツールで遊んで見ること！
+		flex: 1 0 80%;
+	}
+
+	&__image{
+		width: 100%;
+		height: auto;
+	}
+
+	&__sub{
+		width: 100%;
+		position: absolute;
+		bottom:20px;
+		@include flex;
+		justify-content: center;
+	}
+
+	&__dot{
+		display: block;
+		//昔の9999pxみたいなもん
+		text-indent: 100%;
+		//テキストの消去
+		overflow: hidden;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		margin-right: 20px;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+	.isActive{
+		background: #000;
+	}
+}

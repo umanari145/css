@@ -1,0 +1,13 @@
+.IconPanle{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__head{
+		text-align: center;
+		padding: $space-unit;
+	}
+	&__body{
+		padding: $space-unit;
+	}
+}

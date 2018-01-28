@@ -1,0 +1,35 @@
+.OverPanel{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10% 20%;
+	color:#fff;
+
+	&__head{
+		margin: 0 10%;
+		border: 1px solid #fff;
+		text-align: center;
+		padding: 24px 36px;
+		font-size: 24px;
+	}
+	&__body{
+		margin: 16px auto;
+		font-size:inherit;
+	}
+}
+
+.drink{
+	background-image:url('../images/top/menu_drink.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.food{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image:url('../images/top/menu_food.jpg');
+}

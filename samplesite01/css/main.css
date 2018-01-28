@@ -32,18 +32,36 @@ li {
 
 .l-row {
   display: flex;
-  max-width: 1180px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .l-halfcolumn {
-  flex: 1 0 0px;
+  flex: 1 1 50%;
   max-width: 570px;
   margin-right: 40px;
 }
 
 .l-halfcolumn:nth-child(even) {
+  margin-right: 0;
+}
+
+.Section {
+  margin-bottom: 40px;
+}
+
+.l-halfTitle {
+  display: flex;
+  flex: 1 1 50%;
+}
+
+.l-quaterColumn {
+  flex: 1 1 0%;
+  max-width: 265px;
+  margin-right: 40px;
+}
+
+.l-quaterColumn:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -91,6 +109,131 @@ li {
   text-align: center;
   padding: 10px 15px;
   text-transform: uppercase;
+}
+
+.ImageSlide {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ImageSlide__main {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.ImageSlide__item {
+  flex: 1 0 80%;
+}
+
+.ImageSlide__image {
+  width: 100%;
+  height: auto;
+}
+
+.ImageSlide__sub {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.ImageSlide__dot {
+  display: block;
+  text-indent: 100%;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.ImageSlide__dot:last-child {
+  margin-right: 0px;
+}
+
+.ImageSlide .isActive {
+  background: #000;
+}
+
+.sectionLabel {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  line-height: 1;
+}
+
+.sectionLabel::before, .sectionLabel::after {
+  content: '';
+  display: block;
+  flex: 1 0 0%;
+  border-bottom: 1px solid #000;
+}
+
+.sectionLabel::before {
+  margin-right: 10px;
+}
+
+.sectionLabel::after {
+  margin-left: 10px;
+}
+
+.OverPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10% 20%;
+  color: #fff;
+}
+
+.OverPanel__head {
+  margin: 0 10%;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 24px 36px;
+  font-size: 24px;
+}
+
+.OverPanel__body {
+  margin: 16px auto;
+  font-size: inherit;
+}
+
+.drink {
+  background-image: url("../images/top/menu_drink.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.food {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/top/menu_food.jpg");
+}
+
+.IconPanle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.IconPanle__head {
+  text-align: center;
+  padding: 20px;
+}
+
+.IconPanle__body {
+  padding: 20px;
 }
 
 .EntryPanel {

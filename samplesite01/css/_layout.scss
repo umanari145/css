@@ -6,7 +6,6 @@
 }
 .l-row{
 	display: flex;
-	max-width:$base-content-width;
 	flex-wrap:wrap;
 	margin: 0 auto;
 }
@@ -14,11 +13,29 @@
 	//ここを0にせずautoにすると画像の要素によって改行されてしまう
 	//autoは基本内部依存
 	//flex-growを1にしないと潰れてしまう
-	flex:1 0 0px;
+	flex:1 1 50%;
 	max-width: ($base-content-width - $column-space)/2;
 	//幅が動的に決まるので、space-betweenが使えない
 	margin-right: $column-space;
 	&:nth-child(even){
+		margin-right: 0;
+	}
+}
+
+.Section{
+	margin-bottom: $space-unit*2;
+}
+
+.l-halfTitle{
+	display: flex;
+	flex: 1 1 50%;
+}
+
+.l-quaterColumn{
+	flex: 1 1 0%;
+	max-width: ($base-content-width - $column-space*3)/4;
+	margin-right: $column-space;
+	&:nth-child(4n){
 		margin-right: 0;
 	}
 }

@@ -1,0 +1,23 @@
+.sectionLabel{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	align-items: center;
+	line-height: 1;
+
+	&::before,
+	&::after{
+		content:'';
+		display: block;
+		//growが有るので余白に広がる
+		flex:1 0 0%;
+		border-bottom: 1px solid #000;
+	}
+
+	&::before{
+		margin-right: 10px;
+	}
+	&::after{
+		margin-left: 10px;
+	}
+}
