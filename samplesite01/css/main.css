@@ -23,6 +23,40 @@ li {
   clear: both;
 }
 
+.l-column {
+  flex: 0 1 1180px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-row {
+  display: flex;
+  max-width: 1180px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.l-halfcolumn {
+  flex: 1 0 0px;
+  max-width: 570px;
+  margin-right: 40px;
+}
+
+.l-halfcolumn:nth-child(even) {
+  margin-right: 0;
+}
+
+.button {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  padding: 7px 12px;
+  color: #fff;
+  background: #252525;
+}
+
 .Header {
   display: -webkit-flex;
   display: -ms-flex;
@@ -56,17 +90,7 @@ li {
   display: block;
   text-align: center;
   padding: 10px 15px;
-}
-
-.Item_block {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-wrap: nowrap;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  text-transform: uppercase;
 }
 
 .EntryPanel {
@@ -78,10 +102,36 @@ li {
 
 .EntryPanel__sub {
   flex: 1 1 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-right: 20px;
+}
+
+.EntryPanel__thumb {
+  width: 100%;
+  height: auto;
 }
 
 .EntryPanel__main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
   flex: 1 1 55%;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.EntryPanel__head {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.EntryPanel__body {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .EntryPanel__footer {

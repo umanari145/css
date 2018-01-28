@@ -1,0 +1,24 @@
+.l-column{
+	flex: 0 1 $base-content-width;
+	max-width:$base-content-width;
+	margin: 0 auto;
+	padding: 0 $space-unit;
+}
+.l-row{
+	display: flex;
+	max-width:$base-content-width;
+	flex-wrap:wrap;
+	margin: 0 auto;
+}
+.l-halfcolumn{
+	//ここを0にせずautoにすると画像の要素によって改行されてしまう
+	//autoは基本内部依存
+	//flex-growを1にしないと潰れてしまう
+	flex:1 0 0px;
+	max-width: ($base-content-width - $column-space)/2;
+	//幅が動的に決まるので、space-betweenが使えない
+	margin-right: $column-space;
+	&:nth-child(even){
+		margin-right: 0;
+	}
+}

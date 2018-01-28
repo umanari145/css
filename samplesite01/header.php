@@ -11,7 +11,7 @@
 
 </body>
 </html>
-<header class="Header">
+<header class="Header l-column">
 
 	<div class="Header__head">
 		<h1>Site Name</h1>
