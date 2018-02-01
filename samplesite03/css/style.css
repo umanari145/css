@@ -51,6 +51,7 @@ header .global_menu li a::after {
   border-bottom: 1px solid #7C5119;
 }
 header .global_menu li a:hover::after {
+  transition: width 0.3s ease-in-out;
   width: 100%;
 }
 .item {
