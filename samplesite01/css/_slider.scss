@@ -26,6 +26,9 @@
 		bottom:20px;
 		@include flex;
 		justify-content: center;
+		@include mq-sp{
+			top:-20px;
+		}
 	}
 
 	&__dot{
@@ -42,8 +45,14 @@
 		&:last-child{
 			margin-right: 0px;
 		}
+		@include mq-sp{
+			width: 10px;
+			height: 10px;
+			margin-right: 10px;
+		}
 	}
 	.isActive{
 		background: #000;
 	}
+
 }

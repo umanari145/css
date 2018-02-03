@@ -1,0 +1,25 @@
+.Footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: $space-unit*2 auto;
+	padding: $space-unit;
+	color:#ccc;
+	background: #000;
+	&__head{
+		flex:2 1 50%;
+		.logo{
+
+		}
+	}
+
+	&__body,&__footer{
+		flex:1 1 25%;
+		padding-right: $space-unit;
+		align-self: flex-start;
+	}
+
+	&__footer{
+
+	}
+}

@@ -13,13 +13,19 @@
 	//ここを0にせずautoにすると画像の要素によって改行されてしまう
 	//autoは基本内部依存
 	//flex-growを1にしないと潰れてしまう
-	flex:1 1 50%;
+	flex:1 1 47%;
 	max-width: ($base-content-width - $column-space)/2;
 	//幅が動的に決まるので、space-betweenが使えない
 	margin-right: $column-space;
 	&:nth-child(even){
 		margin-right: 0;
 	}
+	@include mq-sp{
+		display: block;
+		flex:1 1 100%;
+		max-width: none;
+		margin-right: 0;
+	};
 }
 
 .Section{

@@ -37,13 +37,22 @@ li {
 }
 
 .l-halfcolumn {
-  flex: 1 1 50%;
+  flex: 1 1 47%;
   max-width: 570px;
   margin-right: 40px;
 }
 
 .l-halfcolumn:nth-child(even) {
   margin-right: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .l-halfcolumn {
+    display: block;
+    flex: 1 1 100%;
+    max-width: none;
+    margin-right: 0;
+  }
 }
 
 .Section {
@@ -141,6 +150,12 @@ li {
   justify-content: center;
 }
 
+@media only screen and (max-width: 640px) {
+  .ImageSlide__sub {
+    top: -20px;
+  }
+}
+
 .ImageSlide__dot {
   display: block;
   text-indent: 100%;
@@ -154,6 +169,14 @@ li {
 
 .ImageSlide__dot:last-child {
   margin-right: 0px;
+}
+
+@media only screen and (max-width: 640px) {
+  .ImageSlide__dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
 }
 
 .ImageSlide .isActive {
@@ -291,4 +314,24 @@ li {
 
 .EntryPanel__footer a:link {
   color: #fff;
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px auto;
+  padding: 20px;
+  color: #ccc;
+  background: #000;
+}
+
+.Footer__head {
+  flex: 2 1 50%;
+}
+
+.Footer__body, .Footer__footer {
+  flex: 1 1 25%;
+  padding-right: 20px;
+  align-self: flex-start;
 }

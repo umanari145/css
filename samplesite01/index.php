@@ -90,3 +90,5 @@
 <script>
 	imageSlide('Slide',2);
 </script>
+
+<?php include 'footer.php';?>

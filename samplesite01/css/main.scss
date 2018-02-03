@@ -1,6 +1,7 @@
 // expanded: $1.css
 @import "base";
 @import "variables";
+@import "mixins";
 @import "layout";
 @import "buttons";
 @import "header";
@@ -9,3 +10,4 @@
 @import "overlayPanel";
 @import "iconPanel";
 @import "entryPanel";
+@import "footer";
