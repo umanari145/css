@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "bootstrap": "^4.0.0-beta.2",
     "bulma": "^0.6.1",
     "clean-css-cli": "^4.1.10",
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^3.1.1",
     "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-webpack": "^1.5.0",
+    "jquery": "^3.3.1",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^4.1.1"
