@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body{
+	padding: 100px 0;
+}
+.font_normal{
+	font-size: 5.6rem;
+}
+.font_vw{
+	font-size:4.375vw;
+}
