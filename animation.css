@@ -71,3 +71,94 @@ body{
 	width: 100px;
 	margin-left: 0;
 }
+
+.detect_scroll_wrapper{
+	width: 200px;
+	height: 100px;
+	background: #fff;
+}
+
+.detect_scroll_button{
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	background: #eee;
+}
+
+.detect_scroll_button_inner{
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	background: #eee;
+	transition-delay: 0s;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+.block_button{
+	position: relative;
+	width:200px;
+	display: inline-block;
+	text-align: center;
+}
+.inner_str{
+	padding: 15px 0;
+	text-align:center;
+	display: block;
+	border: 1px solid #eee;
+}
+
+/**全要素共通**/
+.block_button::before,
+.block_button::after,
+.inner_str::before,
+.inner_str::after
+{
+	display: block;
+	position: absolute;
+	content:'';
+	transition: all 1s ease;
+	background-color: #3498db;
+}
+
+/*→方向*/
+.block_button::before{
+	height: 1px;
+	width: 0px;
+	top:0;
+	left:0;
+}
+/*←方向*/
+.block_button::after{
+	height: 1px;
+	width: 0px;
+	right: 0;
+	bottom: 0;
+}
+/*↓方向*/
+.inner_str::before{
+	height: 0px;
+	width: 1px;
+	right:0;
+	top:0;
+}
+/*↑方向*/
+.inner_str::after{
+	height: 0px;
+	width: 1px;
+	bottom:0;
+	left:0;
+}
+
+.block_button:hover::before,
+.block_button:hover::after
+{
+	width: 100%;
+}
+
+.block_button:hover .inner_str::before ,
+.block_button:hover .inner_str::after
+{
+	height: 100%;
+}
