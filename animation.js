@@ -27,4 +27,17 @@ $(function(){
 		}
 	});
 
+	$(window).scroll(function(){
+		//画像の絶対的な位置
+		var block2_pos = $('.block2').offset().top;
+		//スクロール量
+		var scrollRyou = $(window).scrollTop();
+		var css_prop = $('.block2').css('transform');
+		if (scrollRyou > block2_pos -200) {
+
+		} else {
+
+		}
+	});
+
 });

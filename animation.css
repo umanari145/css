@@ -162,3 +162,26 @@ body{
 {
 	height: 100%;
 }
+
+.block2{
+	width: 200px;
+	padding: 10px 0;
+	text-align: center;
+	transform:translateY(50px) scale(0.2);
+	transition: all 1s liner .1s;
+}
+
+.circle_point{
+	margin:20px 0 0 40px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	transition:all .3s ;
+	border-radius: 50%;
+	background: #eee;
+}
+
+.circle_point:hover{
+	transform: scale(0.9);
+}
