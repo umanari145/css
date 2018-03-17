@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body{
+	padding: 100px 0;
+}
+
+.rel1{
+	background: #eee;
+	color:#ff0000;
+	position: relative;
+	height: 300px;
+	width: 300px;
+	text-align: center;
+}
+
+.abs{
+	background: #282828;
+	width: 100px;
+	height: 100px;
+	color:#ff0000;
+	position: absolute;
+}
+.block{
+	width: 100px;
+	height: 100px;
+	color:#ff0000;
+	border:1px solid #000;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.line_img{
+	top:0;
+	position: absolute;
+	left:50%;
+	margin-left: -1px;
+	width: 2px;
+	height: 100px;
+	background: #ff0000;
+}
+
+
+.line_img2{
+	width: 2px;
+	height: 300px;
+	background: #ff0000;
+}
+
+.scroll_effect{
+	animation: position_changeing 2s  ease 0s infinite;
+}
+
+@keyframes position_changeing {
+	0% {
+		top:-100px;
+	}
+	100% {
+		top:100px;
+	}
+}

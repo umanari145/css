@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <meta charset="UTF-8">
+    <title>position</title>
+	<link rel="stylesheet" type="text/css" href="position.css">
+    <body>
+		<div class="rel1">
+			<div class="abs">youso</div>
+			oyayouso
+		</div>
+		<div style="width:100px;height:20px;"></div>
+		<p>インラインに対してpositionを使い、left要素がない場合、text-alignなどの影響を受ける可能性ある(ブラウザによって違う！)ので基本blockにすべし</p>
+		<div class="rel1">
+			<span class="abs">youso</span>
+			oyayouso
+		</div>
+
+		<div style="width:100px;height:20px;"></div>
+		<p>上要素(line_img)がposition:absoluteだと直下要素(block)がpositionなしでoverflow:hiddenだと効かない(はみ出てしまう)</p>
+		<div class="rel1" style="padding:1px">
+			<div class="block">
+				<div class="line_img"></div>
+			</div>
+		</div>
+
+		<div style="width:100px;height:20px;"></div>
+		<p>上要素(line_img)がposition:absoluteで直下要素(block)がpositionあればoverflow:hiddenがきく</p>
+		<p>ちなみに大親がrelativeで直親がabsoluteであっても直親が基準になる。(一段上の親にはならない)</p>
+		<div class="rel1" style="padding:1px">
+			<div class="block" style="position:absolute;top:30px;left:50%;margin-left:-50px;">
+				<div class="line_img" style="top:50px;"></div>
+			</div>
+		</div>
+
+		<div style="width:100px;height:20px;"></div>
+		<p>通常のoverflow:hidden(両方positionなしであれば正常に機能する)</p>
+		<div class="block" style="margin:0;background:#eee;">
+			<div class="line_img2"></div>
+		</div>
+
+		<div style="width:100px;height:20px;"></div>
+		<p>animation機能</p>
+		<div class="rel1" style="padding:1px">
+			<div class="block" style="position:absolute;top:30px;left:50%;margin-left:-50px;">
+				<div class="line_img scroll_effect" ></div>
+			</div>
+		</div>
+
+
+	</body>
+</html>
