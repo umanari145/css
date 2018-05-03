@@ -196,5 +196,38 @@
 		</div>
 	</div>
 
+	<p>checkboxの均等幅 controlを一切使わず、label, inputに.checkboxを使ってもいいが均等marginが取れない</p>
+	<div class="field is-grouped">
+		<div class="control">
+			<label for="id_1">
+				<input type="checkbox" name="var1" id="id_1">
+				ラベル1
+			</label>
+		</div>
+		<div class="control">
+			<label for="id_2">
+				<input type="checkbox" name="var2" id="id_2" >
+				ラベル2
+			</label>
+		</div>
+		<div class="control">
+			<label for="id_3">
+				<input type="checkbox" name="var3" id="id_3">
+				ラベル3
+			</label>
+		</div>
+	</div>
+
+	<p>radioの均等幅 label,inputにradioをつけると　.radio+.radioでmargin取れる</p>
+	<label for="rid_1" class="radio">
+		<input type="radio" name="var1" id="rid_1" class="radio">
+		ラベル1
+	</label>
+	<label for="rid_2" class="radio">
+		<input type="radio" name="var2" id="rid_2" class="radio">
+		ラベル2
+	</label>
+
+
 </body>
 </html>
