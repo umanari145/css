@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+	<p>通常のinput</p>
+	<input class="input" name="name" value="">
+
+	<p>通常のinput+control。とりあえずinputはcontrolでくくる</p>
+	<div class="control">
+		<input class="input" name="name" value="">
+	</div>
+
+	<p>
+		fieldクラスは縦向きだと全体に対してlabel+inputの全体に対してかける。
+		lastを除いてborder-bottomがかかる。tableだとあんまり意味ないかも。<br>
+		ただしis-grouped-centerなどで中央化、グループ化に貢献する
+	</p>
+	<div class="field">
+		<label class="label">Name</label>
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+	</div>
+
+	<div class="field">
+		<label class="label">Email</label>
+		<div class="control">
+			<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+		</div>
+	</div>
+
+	<p>field+is-horizontalを入れるとflexがかかりlabel+inputが横に並ぶ。２つ並べても横に並ぶ</p>
+	<div class="field is-horizontal">
+		<label class="label">Name</label>
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+	</div>
+
+	<p>field-label,field-bodyはセンタリング的+余白生成な機能がある。<br>
+		field-bodyがflex-grow1,flex-grow:5がかかり幅が大幅に増える<br>
+	field-body+fieldでpaddingがかかり、幅いっぱいに広がる
+	</p>
+	<div class="field is-horizontal">
+		<div class="field-label">
+			<label class="label">Name</label>
+		</div>
+		<div class="field-body">
+			<div class="field">
+				<div class="control">
+					<input class="input" type="text" placeholder="e.g Alex Smith">
+				</div>
+			</div>
+			<div class="field">
+				<div class="control">
+					<input class="input" type="text" placeholder="e.g Alex Smith">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<p>ボタンのグループ化(横に並ぶ)基本はfieldと一緒に使う flexがかかる</p>
+	<div class="field is-grouped">
+		<div class="control">
+			<a href="" class="button">button1</a>
+		</div>
+		<div class="control">
+			<a href="" class="button">button2</a>
+		</div>
+	</div>
+
+	<p>ボタンのグループ化+center化　fieldがないと意味ない</p>
+	<div class="field is-grouped is-grouped-centered">
+		<div class="control">
+			<a href="" class="button">button1</a>
+		</div>
+		<div class="control">
+			<a href="" class="button">button2</a>
+		</div>
+	</div>
+
+
+	<div class="field is-horizontal">
+		<div class="field">
+			<div class="control">
+				<input class="input" type="text" placeholder="e.g Alex Smith">
+			</div>
+		</div>
+		<div class="field">
+			<div class="control">
+				<input class="input" type="text" placeholder="e.g Alex Smith">
+			</div>
+		</div>
+		<div class="field">
+			<div class="control">
+				<input class="input" type="text" placeholder="e.g Alex Smith">
+			</div>
+		</div>
+	</div>
+
+	<p>
+		複数のinput+文字　iconmark+input+button<br>
+		controlを使うことでmarginが使える。inline-iconでaling-item:centerがきく
+	</p>
+	<div class="field is-grouped" style="">
+		<span class="inline-icon control">〒</span>
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+		<div class="control">
+			<input type="button" class="button is-primary" value="押す">
+		</div>
+	</div>
+	<div class="control">
+		<input class="input" type="text" placeholder="e.g Alex Smith">
+	</div>
+
+	<p>select</p>
+	<div class="control">
+		<div class="select">
+			<select name="test" id="">
+					<option value="A">AAAAAAA</option>
+					<option value="B">BBBBBBB</option>
+					<option value="C">CCCCCCC</option>
+			</select>
+		</div>
+	</div>
+
+	<p>文字プラス　pulldown</p>
+	<div class="field is-grouped">
+		<span class="inline-icon control">
+			役職
+		</span>
+		<div class="control">
+			<div class="select">
+				<select name="test" id="">
+						<option value="A">AAAAAAA</option>
+						<option value="B">BBBBBBB</option>
+						<option value="C">CCCCCCC</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="field is-grouped">
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+		<span class="inline-icon control">
+			カナ
+		</span>
+		<div class="control">
+			<input class="input" type="text" placeholder="e.g Alex Smith">
+		</div>
+	</div>
+
+	<p>プルダウンと文字列の入り込み</p>
+	<div class="field is-grouped">
+		<div class="control">
+			<div class="select">
+				<select name="test" id="">
+						<option value="A">AAAAAAA</option>
+						<option value="B">BBBBBBB</option>
+						<option value="C">CCCCCCC</option>
+				</select>
+			</div>
+		</div>
+		<span class="inline-icon control">
+			(
+		</span>
+		<div class="control">
+			<div class="select">
+				<select name="test" id="">
+						<option value="A">AAAAAAA</option>
+						<option value="B">BBBBBBB</option>
+						<option value="C">CCCCCCC</option>
+				</select>
+			</div>
+		</div>
+		<span class="inline-icon control">
+			)
+		</span>
+		<div class="control">
+			<div class="select">
+				<select name="test" id="">
+						<option value="A">AAAAAAA</option>
+						<option value="B">BBBBBBB</option>
+						<option value="C">CCCCCCC</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
