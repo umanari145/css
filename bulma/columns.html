@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+<a href="https://bulma.io/documentation/columns/sizes/">
+	https://bulma.io/documentation/columns/sizes/
+</a>
+<br>複雑な幅の持ち方は→
+<a href="https://bulma.io/documentation/columns/nesting/">
+https://bulma.io/documentation/columns/nesting/
+</a>
+<br>スペースを均等にコントロールできる→default0.75remをなしにできる
+<a href="https://bulma.io/documentation/columns/nesting/">
+https://bulma.io/documentation/columns/nesting/
+</a>
+<p>
+	基本的には下記のようにブロック分割で使う<br>
+	レスポンシブ対策として縮むと縦になる
+</p>
+<div class="columns">
+	<div class="column">first</div>
+	<div class="column">second</div>
+	<div class="column">third</div>
+	<div class="column">fourth</div>
+</div>
+<p>
+	is-mobileをcolumnsに入れると縦にならない<br>
+</p>
+<div class="columns is-mobile">
+	<div class="column">first</div>
+	<div class="column">second</div>
+	<div class="column">third</div>
+	<div class="column">fourth</div>
+</div>
+<p>
+	is-desktopに入れると縦になる幅が変わる<br>
+</p>
+<div class="columns is-desktop">
+	<div class="column">first</div>
+	<div class="column">second</div>
+	<div class="column">third</div>
+	<div class="column">fourth</div>
+</div>
+<p>
+	columnの中にcssを入れ幅を1/nを定義可能(ただしこれは横幅全体に対するもの)<br>
+	narrowを使うと必要最低限の幅のみとる　secondに使用
+</p>
+<div class="columns">
+	<div class="column is-half">first is-half持ち(それ以外は均等幅)</div>
+	<div class="column is-narrow">second</div>
+	<div class="column">third</div>
+	<div class="column">fourth</div>
+</div>
+<p>
+	offset使うと任意地点から場所を取る(margin-left)<br>
+	columnsなしでも単独で動く
+</p>
+<div class="columns">
+	<div class="column is-4 is-offset-8">右づめよりこのほうがいい</div>
+</div>
+
+<p>
+	カラムのセンタリングはcolumns+is-centered<br>
+	columnだけでは聞かない
+</p>
+<div class="columns is-centered">
+	<div class="column is-3">
+		center
+	</div>
+</div>
+
+<div class="columns">
+	<div class="column is-half">first is-half持ち(それ以外は均等幅)</div>
+	<div class="column is-narrow">second</div>
+	<div class="column">third</div>
+	<div class="column">fourth</div>
+</div>

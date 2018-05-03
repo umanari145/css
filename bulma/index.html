@@ -22,7 +22,9 @@
 
 		<tr>
 			<th>
-				<label for="type_1"> class="input"のみ</label>
+				<label for="type_1">
+					class="input"のみ 幅がいっぱい(100%)になる
+				</label>
 			</th>
 			<td>
 				<input type="text" name="name" value="" class="input">
@@ -31,7 +33,10 @@
 
 		<tr>
 			<th>
-				<label for="type_1">columnで囲む</label>
+				<label for="type_1">
+					columnで囲む<br>
+					単独で使うと均等のpaddingが入るぐらい
+				</label>
 			</th>
 			<td>
 				<div class="column">
@@ -39,7 +44,27 @@
 				</div>
 			</td>
 		</tr>
-
+		<tr>
+			<th>
+				<label for="type_1">
+					columnは基本的にcolumns+columnで使い、均等幅になる<br>
+					密集地区よりは全体のブロックで使う<br>
+					<a href="https://bulma.io/documentation/columns/basics/">
+						https://bulma.io/documentation/columns/basics/
+					</a>
+				</label>
+			</th>
+			<td>
+				<div class="columns">
+					<div class="column">
+						<input type="text" name="name" value="" class="input">
+					</div>
+					<div class="column">
+						<input type="text" name="name" value="" class="input">
+					</div>
+				</div>
+			</td>
+		</tr>
 		<tr>
 			<th>
 				<label for="type_1">
