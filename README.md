@@ -1,3 +1,49 @@
 # css
 
 - animation.html cssを使った動的なアニメーション keyframe,animate, transition, before&afterの枠線, scroll検知など
+
+- font_chousei.html fontサイズ vwの使用など
+
+- fontsize.html %表記,px,remなどについて
+
+- image_font.html cssが画像とフォントサイズについての制御パターン
+
+- main_visual.html メインキャッチ画像の固定方法などについて。backgroundがらみのプロパティ説明
+
+- main_visual2.html 大型の背景画像の固定方法について。
+
+- margin_float.html floatを使ったレイアウトの組み方について
+
+- modal.html bootstrapを使ったモーダルウィンドウについて
+
+- original_pararax.php transformを使ったpararaxエフェクトに関して
+
+- position.html positionの細かい挙動などについて
+
+- table.html tableについて。各幅のロジックがどのように決まるかなど
+
+- table2.html 固定テーブルの挙動について JSのライブラリ(jquery.tablefix.js)とcssを使ったパターンに関して
+
+- vertical.html テーブルの中央よせに関して
+
+- gulpfile.js gulpを使った(less,sass,ejs)コンパイルに関して
+
+- prohazusample 書籍「プロとして恥ずかしくない新CSSデザインの大原則」のソース。比較的オーソドックスなページのレイアウトについて
+
+- sample/index.html 比較的小ネタ的なCSSについて。書籍「初めてのCSS設計」ネタ多し。またカスタマイズされたチェックボックスなど。
+
+- samplesite01 書籍「現場のプロが本気で教える」HTML/CSSデザイン講義
+
+- samplesite02〜04 サイトの作成サンプル。書籍「HTML5/CSS3モダンコーディング」のサンプルなど
+
+- src/customer.scss mystyle.scssとmyvariable.scssの読み込み。これ1つで他のcssを読み込める
+
+- sass/sample.scss sassの基礎的なサンプル
+
+- flex flexのサンプル
+
+- ejs ejs(htmlのテンプレートエンジン)を使ったサンプル(gulpで吐き出す)
+
+- compassdemo compassを使ったdemo。201709ごろ使用。
+
+- bulma bulmaを使ったhtmlのサンプル
