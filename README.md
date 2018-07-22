@@ -1,5 +1,6 @@
 # css
 
+## ファイル概要
 - animation.html cssを使った動的なアニメーション keyframe,animate, transition, before&afterの枠線, scroll検知など
 
 - font_chousei.html fontサイズ vwの使用など
@@ -47,3 +48,37 @@
 - compassdemo compassを使ったdemo。201709ごろ使用。
 
 - bulma bulmaを使ったhtmlのサンプル
+
+## bowerインストール
+
+bower.jsonに記述されたライブラリを読み込み
+
+```
+bower install
+```
+
+## npmインストール
+
+package.jsonに記述されたラリブラリの読み込み
+
+```
+npm install
+```
+### npmスクリプトの活用
+
+package.jsonのscriptに書かれたものが走る
+```
+npm run test
+
+npm run css
+```
+
+
+### gulpの活用
+
+```
+npm run gulp (タスク名)
+```
+
+上記のタスク名はgulpfile.jsの記述を参考に。
+gulp.task(・・・)　ここがタスク名になる
