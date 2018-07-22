@@ -16,3 +16,43 @@
 	border:1px solid #000;
 	border-bottom: 1px solid #000;
 }
+
+/** 固定パターン サンプル２ **/
+.sticky_table{
+	display: block;
+	position: relative;
+	overflow: scroll;
+	width: calc(100vw - 43rem);
+	height: calc(75vh);
+	border-collapse: collapse;
+	font-size: 0;
+	border:1px solid #000;
+}
+
+.sticky_table thead,
+.sticky_table tbody{
+	display: block;
+	width: max-content;
+}
+
+.sticky_table th,
+.sticky_table td {
+	width: 8.0rem;
+	background: #fff;
+	font-size: 1.0rem;
+}
+
+.sticky_table th{
+	border-right: 1px solid #000;
+}
+
+.sticky_table td{
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.sticky_table thead {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
