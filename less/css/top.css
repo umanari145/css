@@ -281,6 +281,66 @@ icon画像
   border-bottom: 1px solid #000;
   transform: rotate(45deg);
 }
+.border-as-triangle {
+  padding: 0 50px 0 0;
+  list-style: none;
+  display: flex;
+}
+.border-as-triangle li {
+  display: block;
+}
+.border-as-triangle li:first-of-type a {
+  padding-left: 35px;
+  border-left: 1px solid #336;
+}
+.border-as-triangle li a {
+  border-top: 1px solid #336;
+  border-bottom: 1px solid #336;
+  display: inline-block;
+  padding: 0 15px 0 60px;
+  line-height: 80px;
+  position: relative;
+  color: #336;
+  background: #ddd;
+}
+.border-as-triangle li a:after,
+.border-as-triangle li a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 100%;
+  margin-top: -41px;
+  display: block;
+  border-top: 41px solid  transparent;
+  border-bottom: 41px solid  transparent;
+  position: absolute;
+}
+.border-as-triangle li a:before {
+  border-left: 30px solid #ddd;
+  z-index: 2;
+}
+.border-as-triangle li a:after {
+  border-left: 30px solid #336;
+  margin-left: 1px;
+  z-index: 1;
+}
+.border-as-triangle li.active2 a {
+  background: #003;
+  color: #ddd;
+}
+.border-as-triangle li.active2 a:before,
+.border-as-triangle li.active2 a:after {
+  border-left: 41px solid #003;
+}
+.border-as-triangle li a:hover {
+  background: #003;
+  color: #ddd;
+}
+.border-as-triangle li a:hover:before,
+.border-as-triangle li a:hover:after {
+  border-left: 41px solid #003;
+}
 #contents {
   border-radius: 8px;
   -webkit-border-radius: 8px;

@@ -333,3 +333,65 @@ icon画像
 	border-bottom:  1px solid #000;
 	transform: rotate(45deg);
 }
+
+.border-as-triangle{
+	padding: 0 50px 0 0;
+	list-style: none;
+	display: flex;
+	li{
+		display: block;
+		&:first-of-type{
+			a{
+				padding-left: 35px;
+				border-left: 1px solid #336;
+			}
+		}
+		a{
+			border-top: 1px solid #336;
+			border-bottom: 1px solid #336;
+			display: inline-block;
+			padding: 0 15px 0 60px;
+			line-height: 80px;
+			position: relative;
+			color:#336;
+			background: #ddd;
+			&:after,&:before{
+				content:'';
+				width: 0;
+				height: 0;
+				top:50%;
+				left: 100%;
+				margin-top: -41px;
+				display: block;
+				border-top: 41px solid  transparent;
+				border-bottom: 41px solid  transparent;
+				position: absolute;
+			}
+			&:before{
+				border-left: 30px solid #ddd;
+				z-index: 2;
+			}
+			&:after{
+				border-left: 30px solid #336;
+				margin-left: 1px;
+				z-index: 1;
+			}
+		}
+		&.active2{
+			a{
+				background:#003;
+				color:#ddd;
+				&:before, &:after{
+					border-left: 41px solid #003;
+				}
+			}
+		}
+		a:hover{
+			background:#003;
+			color:#ddd;
+			&:before, &:after{
+				border-left: 41px solid #003;
+			}
+		}
+	}
+}

@@ -128,3 +128,21 @@
 <?php
     include 'footer.php';
 ?>
+
+<p>パンくずで見かけるCSS</p>
+https://coliss.com/articles/build-websites/operation/css/breadcrumb-with-arrow-shaped-links.html
+
+<ul class="border-as-triangle">
+  <li>
+    <a href="#1">Link</a>
+  </li>
+  <li>
+    <a href="#2">Link</a>
+  </li>
+  <li class="active2">
+    <a href="#">Active</a>
+  </li>
+  <li>
+    <a href="#4">Link</a>
+  </li>
+</ul>
