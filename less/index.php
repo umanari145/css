@@ -146,3 +146,19 @@ https://coliss.com/articles/build-websites/operation/css/breadcrumb-with-arrow-s
     <a href="#4">Link</a>
   </li>
 </ul>
+
+
+<ul class="border-as-triangle2">
+  <li>
+    <a href="#1">Link</a>
+  </li>
+  <li style="z-index:-2;">
+    <a href="#2">Link</a>
+  </li>
+  <li class="active2" style="z-index:-3">
+    <a href="#">Active</a>
+  </li>
+  <li style="z-index:-4;">
+    <a href="#4">Link</a>
+  </li>
+</ul>

@@ -395,3 +395,57 @@ icon画像
 		}
 	}
 }
+
+
+
+.border-as-triangle2{
+	padding: 0 50px 0 0;
+	list-style: none;
+	display: flex;
+	overflow: hidden;
+	li{
+
+		display: block;
+		&:first-of-type{
+			a{
+				padding-left: 35px;
+				border-left: 1px solid #336;
+			}
+		}
+		a{
+			display: inline-block;
+			padding: 0 15px 0 60px;
+			line-height: 80px;
+			position: relative;
+			color:#336;
+			background: #ddd;
+			&:after{
+				content:'';
+				width:95px;
+				height: 95px;
+				top: -7px;
+				right: -21px;
+				display: block;
+				position: absolute;
+				transform: rotate(45deg) skew(10deg,10deg);
+				z-index: -1;
+				background: inherit;
+				border-right: 1px solid #336;
+				border-top: 1px solid #336;
+			}
+		}
+		&.active2{
+			a{
+				background:#003;
+				color:#ddd;
+			}
+		}
+		a:hover{
+			background:#003;
+			color:#ddd;
+			&:after{
+				color:#ddd;
+			}
+		}
+	}
+}
