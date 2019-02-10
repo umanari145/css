@@ -2,6 +2,7 @@
 
 ## ファイル概要
 - animation.html cssを使った動的なアニメーション keyframe,animate, transition, before&afterの枠線, scroll検知など
+- css_framework bulmaをベースにしたCSSフレームワーク npx gulpで動く
 
 - font_chousei.html fontサイズ vwの使用など
 
