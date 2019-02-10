@@ -28,7 +28,7 @@ gulp.task('watch', () => {
     config.css.watch,
     config.html.src
   ];
-  gulp.watch(config.css.src, ['sass']);
+  gulp.watch(config.css.watch, ['sass']);
   gulp.watch(config.html.src, ['pug']);
 
   gulp.watch( watchList , () => {

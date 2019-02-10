@@ -20,17 +20,17 @@ $d2:'';
     $d2:'left';
   }
   @for $i from 1 through 5 {
-    .m#{$d}#{$i} {
-      $size:$i * 5;
+    $size:$i*5;
+    .m#{$d}#{$size} {
       margin-#{$d2}:#{$size}px !important;
     }
     .p#{$d}#{$i} {
-      $size:$i * 5;
       padding-#{$d2}:#{$size}px !important;
     }
   }
 }
 
+//flexのパターン
 $jusity_content: fs,fe,c,sp,sa;
 $align-items: fs,fe,c;
 $jc2:'flex-start';
@@ -63,4 +63,104 @@ $ai2:'flex-end';
       align-items: #{$ai2};
     }
   }
+}
+
+//センタリング
+.centering {
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.cols{
+  @extend .columns;
+  @extend .is-paddingless;
+  @extend .is-marginless;
+}
+
+.col{
+  @extend .column;
+  @extend .is-paddingless;
+  @extend .is-marginless;
+}
+
+//%幅を持ったカラム
+@for $i from 1 through 12 {
+  .col_w#{$i} {
+    @extend .column;
+    @extend .is-paddingless;
+    @extend .is-#{$i};
+
+  }
+
+  .col_w#{$i}_p {
+    @extend .column;
+    @extend .is-#{$i};
+  }
+  //inputなどでもきくwidhの設定
+  //%幅を持ったカラム
+  $width_pecent:(100/12)*$i;
+  .w#{$i} {
+     width:#{$width_pecent}% !important;
+  }
+}
+
+
+@for $i from 1 through 40 {
+  $width_size:$i*5;
+  .w#{$width_size}px {
+     width:#{$width_size}px !important;
+  }
+}
+
+
+//form系
+.input_auto{
+  @extend .input;
+  width: auto;
+}
+
+
+//table系
+.table_no_p{
+  @extend .table;
+  th, td{
+    padding:0;
+  }
+}
+
+
+//tableの全パターン
+$vertical: t,m,b;
+$textaling: r,c,l;
+$v2:'top';
+$t2:'right';
+@each $v in $vertical {
+  @if $v == 't' {
+    $v2:'top';
+  } @elseif $v =='m' {
+    $v2:'middle';
+  } @elseif $v =='b' {
+    $v2:'bottom';
+  }
+  @each $t in $textaling {
+    @if $t == 'r' {
+      $t2:'right';
+    } @elseif $t =='c' {
+      $t2:'center';
+    } @elseif $t =='l' {
+      $t2:'left';
+    }
+
+    .table {
+      .td_#{$v}_#{$t}{
+        vertical-align: #{$v2};
+        text-align: #{$t2};
+      }
+    }
+  }
+}
+
+//inlineのセンタリング
+.ic{
+  vertical-align: middle !important;
 }

@@ -2,7 +2,54 @@
 <html lang="ja">
   <header>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./dest/css/common.css">
   </header>
-  <body></body>
-  <link rel="stylesheet" type="text/css" href="./dest/css/index.css">
+  <body class="container">
+    <div class="navbar">トップのヘッド</div>
+    <div class="cols">
+      <div class="col_w3">カラム1</div>
+      <div class="col_w9">
+        <input class="input" type="text" name="name">
+      </div>
+    </div>
+    <table class="table is-bordered is-striped  is-hoverable is-fullwidth mt20">
+      <tr>
+        <th class="td_m_c">width auto</th>
+        <td>
+          <input class="input_auto" name="name2">
+        </td>
+      </tr>
+      <tr>
+        <th class="td_m_c">任意（例えば5/12)</th>
+        <td>
+          <input class="input col_w5" name="name2">
+        </td>
+      </tr>
+      <tr>
+        <th class="td_m_c">100%</th>
+        <td>
+          <input class="input col_w12" name="name2">
+        </td>
+      </tr>
+      <tr>
+        <th class="td_m_c">郵便番号</th>
+        <td class="td_m_l"><span class="ic">〒</span>
+          <input class="input_auto w100px" name="zip1"><span class="ic ml5">-</span>
+          <input class="input_auto w100px" name="zip2">
+          <button class="button is-info">住所確認</button>
+          <div>
+            <input class="input mt5 w6" name="address">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th class="td_m_c">プルダウン</th>
+        <td class="td_m_l"><span class="ic">役職</span>
+          <div class="select">
+            <select></select>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>

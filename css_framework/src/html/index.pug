@@ -2,6 +2,39 @@ doctype html
 html(lang="ja")
     header
         meta(charset="utf-8")
-    body
-    link(rel="stylesheet", type="text/css" href="./dest/css/index.css")
-    div#hoge
+        link(rel="stylesheet", type="text/css" href="./dest/css/common.css")
+    body.container
+       div.navbar トップのヘッド
+       div.cols
+           div.col_w3 カラム1
+           div.col_w9
+               input(type="text" name="name",class="input")
+       table(class="table is-bordered is-striped  is-hoverable is-fullwidth mt20")
+           tr
+               th.td_m_c width auto
+               td
+                   input(class="input_auto", name="name2")
+           tr
+               th.td_m_c 任意（例えば5/12)
+               td
+                   input(class="input col_w5", name="name2")
+           tr
+               th.td_m_c 100%
+               td
+                   input(class="input col_w12", name="name2")
+           tr
+               th.td_m_c 郵便番号
+               td.td_m_l
+                   span.ic 〒
+                   input(class="input_auto w100px", name="zip1")
+                   span(class="ic ml5") -
+                   input(class="input_auto w100px", name="zip2")
+                   button(class="button is-info") 住所確認
+                   div
+                       input(class="input mt5 w6" name="address")
+           tr
+               th.td_m_c プルダウン
+               td.td_m_l
+                   span.ic 役職
+                   div.select
+                       select
