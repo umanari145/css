@@ -113,21 +113,35 @@ $ai2:'flex-end';
 }
 
 
-//form系
-.input_auto{
-  @extend .input;
-  width: auto;
+.w_auto{
+  width: auto !important;
+}
+
+.h_auto{
+  height: auto !important;
 }
 
 
-//table系
-.table_no_p{
-  @extend .table;
-  th, td{
-    padding:0;
+@for $i from 1 through 10 {
+  $size:$i * 10;
+  .w_#{$size} {
+    width:#{$size}% !important;
   }
 }
 
+@for $i from 1 through 20 {
+  $size:$i;
+  .f_#{$size} {
+    font-size:#{$size}% !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  $size:$i * 10;
+  .w_#{$size}_p {
+    width:#{$size}px !important;
+  }
+}
 
 //tableの全パターン
 $vertical: t,m,b;
@@ -163,4 +177,12 @@ $t2:'right';
 //inlineのセンタリング
 .ic{
   vertical-align: middle !important;
+}
+
+.f_eq {
+  flex:1 1 0;
+}
+
+.d-no{
+  display: none !important;
 }
