@@ -1,10 +1,3 @@
-@for $i from 1 through 9 {
-  $label_w:$i*25;
-  .label-w#{$label_w} {
-    display: inline-block;
-    width: #{$label_w}px;
-  }
-}
 
 //margin,paddingの上右下左
 $direction: t,r,b,l;
@@ -65,12 +58,9 @@ $ai2:'flex-end';
   }
 }
 
-//センタリング
-.centering {
-  margin-right:auto;
-  margin-left:auto;
-}
 
+
+//
 .cols{
   @extend .columns;
   @extend .is-paddingless;
@@ -96,36 +86,35 @@ $ai2:'flex-end';
     @extend .column;
     @extend .is-#{$i};
   }
-  //inputなどでもきくwidhの設定
-  //%幅を持ったカラム
-  $width_pecent:(100/12)*$i;
-  .w#{$i} {
-     width:#{$width_pecent}% !important;
-  }
 }
-
-
-@for $i from 1 through 40 {
-  $width_size:$i*5;
-  .w#{$width_size}px {
-     width:#{$width_size}px !important;
-  }
-}
-
 
 .w_auto{
   width: auto !important;
 }
+
+.input_auto{
+  @extend .input;
+  width: auto;
+}
+
 
 .h_auto{
   height: auto !important;
 }
 
 
-@for $i from 1 through 10 {
-  $size:$i * 10;
+@for $i from 1 through 20 {
+  $size:$i * 5;
   .w_#{$size} {
     width:#{$size}% !important;
+  }
+}
+
+
+@for $i from 1 through 40 {
+  $size:$i * 5;
+  .w_#{$size}_p {
+    width:#{$size}px !important;
   }
 }
 
@@ -136,12 +125,6 @@ $ai2:'flex-end';
   }
 }
 
-@for $i from 1 through 20 {
-  $size:$i * 10;
-  .w_#{$size}_p {
-    width:#{$size}px !important;
-  }
-}
 
 //tableの全パターン
 $vertical: t,m,b;
@@ -165,19 +148,14 @@ $t2:'right';
       $t2:'left';
     }
 
-    .table {
-      .td_#{$v}_#{$t}{
-        vertical-align: #{$v2};
-        text-align: #{$t2};
-      }
+    .vt_#{$v}_#{$t}{
+        vertical-align: #{$v2} !important;
+        text-align: #{$t2} !important;
     }
   }
 }
 
-//inlineのセンタリング
-.ic{
-  vertical-align: middle !important;
-}
+
 
 .f_eq {
   flex:1 1 0;
