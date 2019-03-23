@@ -16,7 +16,7 @@
 - $widescreen: from 1216px
 - $fullhd: from 1408px
 
-###container
+### container
 - いわゆるwrapperに相当するコンテンナ部分
 - margin: 0 autoがディフォルト
 - いわゆるwrapperに相当する部分
