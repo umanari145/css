@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <meta charset="UTF-8">
+    <title>vertical-align</title>
+<style>
+html{
+	line-height: 1.6em;
+}
+.hidden_box_check {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box_check label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*チェックは見えなくする*/
+.hidden_box_check input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box_check .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box_check input.targeted:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+
+
+/** radio **/
+.hidden_box_radio .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box_radio input.targeted:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+</style>
+    <body>
+		<p>checkbox</p>
+		<div class="hidden_box_check">
+	    	<label for="label1">クリックして表示(targeted)</label>
+	    	<input type="checkbox" id="label1" class="targeted"/>
+			<label for="label2">クリックして表示(non targeted)</label>
+			<input type="checkbox" id="label2"/>
+			<!--間に入ってても親(hidden_boxがきくCSSセレクタ)-->
+			<div class=""></div>
+			<div class=""></div>
+				<div class="hidden_show">
+				<!--非表示ここから-->
+					<p><img src="reika.jpg"></p>
+				<!--ここまで-->
+				</div>
+		</div>
+		<p>radio</p>
+		<div class="hidden_box_radio">
+			<input type="radio" id="radio1" name="var1" class="targeted"/>
+			<label for="radio1">クリックして表示(targeted)</label>
+			<input type="radio" id="radio2" name="var1" />
+			<label for="radio2">クリックして表示(non targeted)</label>
+
+			<!--間に入ってても親(hidden_boxがきくCSSセレクタ)-->
+			<div class=""></div>
+			<div class=""></div>
+				<div class="hidden_show">
+				<!--非表示ここから-->
+					<p><img src="reika.jpg"></p>
+				<!--ここまで-->
+				</div>
+		</div>
+		<p>select</p>
+		<div class="hidden_box_select">
+			<select name="" id="">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+
+			<!--間に入ってても親(hidden_boxがきくCSSセレクタ)-->
+			<div class=""></div>
+			<div class=""></div>
+				<div class="hidden_show">
+				<!--非表示ここから-->
+					<p><img src="reika.jpg"></p>
+				<!--ここまで-->
+				</div>
+		</div>
+	</body>
+</html>
