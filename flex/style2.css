@@ -63,3 +63,7 @@
 	background: #ff0000;
 	flex: 0 1 150px;
 }
+
+.inline-flex{
+	display: inline-flex;
+}
