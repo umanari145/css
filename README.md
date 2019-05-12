@@ -42,6 +42,15 @@
 
 - src/customer.scss mystyle.scssとmyvariable.scssの読み込み。これ1つで他のcssを読み込める
 
+
+- tailwind 新しいCSSの手法
+```
+cd ./tailwind
+npx tailwind build tailwind.css -c tailwind.js -o output.css
+# https://tailwindcss.com/docs/what-is-tailwind/
+# 元実際に読み込むcssはoutput.css
+```
+
 - sass/sample.scss sassの基礎的なサンプル
 
 - flex flexのサンプル

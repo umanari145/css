@@ -1,4 +1,5 @@
 /node_modules
 .sass-cache
 dump.rdb
+/**/node_modules
 /css_framework/node_modules
