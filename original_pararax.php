@@ -12,11 +12,11 @@
 	<p style="text-align:center;">下にスクロールしてみて下さい。</p>
 	<ul id="image_block_area">
 		<?php
-			for($i=1;$i<=10;$i++):
-			$file_path = sprintf("reika%02d.jpg",$i);
-			$amari = $i%3;
-		?>
-		<?php if($amari ==1):?>
+            for ($i=1;$i<=10;$i++):
+            $file_path = sprintf("reika%02d.jpg", $i);
+            $amari = $i%3;
+        ?>
+		<?php if ($amari ==1):?>
 			<div class="wrapper_block" style="white-space:nowrap;">
 		<?php endif;?>
 
@@ -24,13 +24,13 @@
 			<img src="./image_for_slide/<?php echo $file_path;?>" alt="桜井" class="img_elem">
 		</li>
 
-		<?php if($amari ==0):?>
+		<?php if ($amari ==0):?>
 		</div>
 		<?php endif;?>
 
 		<?php
-			endfor;
-		?>
+            endfor;
+        ?>
 	</ul>
 
 	</body>
