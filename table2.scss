@@ -29,21 +29,27 @@
     display: block;
     position: relative;
     overflow: scroll;
-    width: 100%;
+    width: 500px;
     height: 100%;
 	border-collapse: collapse;
     font-size: 0;
     thead, tbody {
       display: block;
-      width: max-content;
+	  width: 100%;
     }
+	tr{
+		display: flex;
+	}
     th, td {
-      display: inline-block;
-      min-width: 8.0rem; /* fixed value */
+      display: block;
+	  width: 25%;
       background: #fff;
 	  border:1px solid #e67e22;
       font-size: 1.0rem;
     }
+	td{
+		height: auto;
+	}
     tbody th {
       position: sticky;
       left: 0;

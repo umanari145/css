@@ -28,20 +28,23 @@
     display: block;
     position: relative;
     overflow: scroll;
-    width: 100%;
+    width: 500px;
     height: 100%;
     border-collapse: collapse;
     font-size: 0; }
     .sticky_table table thead, .sticky_table table tbody {
       display: block;
-      width: max-content; }
+      width: 100%; }
+    .sticky_table table tr {
+      display: flex; }
     .sticky_table table th, .sticky_table table td {
-      display: inline-block;
-      min-width: 8.0rem;
-      /* fixed value */
+      display: block;
+      width: 25%;
       background: #fff;
       border: 1px solid #e67e22;
       font-size: 1.0rem; }
+    .sticky_table table td {
+      height: auto; }
     .sticky_table table tbody th {
       position: sticky;
       left: 0;
