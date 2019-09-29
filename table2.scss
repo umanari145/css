@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.main_table{
+	border-collapse: collapse;
+	border:1px solid #000;
+}
+
+.main_table th,.main_table td{
+	border:1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/** 固定パターン サンプル２ **/
+.sticky_table{
+	display: block;
+	position: relative;
+	overflow: scroll;
+	width: calc(100vw - 43rem);
+	height: calc(75vh);
+	border-collapse: collapse;
+	font-size: 0;
+	border:1px solid #000;
+}
+
+.sticky_table thead,
+.sticky_table tbody{
+	display: block;
+	width: max-content;
+}
+
+.sticky_table th,
+.sticky_table td {
+	width: 8.0rem;
+	background: #fff;
+	font-size: 1.0rem;
+}
+
+.sticky_table th{
+	border-right: 1px solid #000;
+}
+
+.sticky_table td{
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.sticky_table thead {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+
+.table{
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+.table-fixed{
+  width: 500px;
+  background-color: #f3f3f3;
+  tbody{
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+    }
+  thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+       background-color: #f39c12;
+       border-color:#e67e22;
+      }
+    }
+  }
+}

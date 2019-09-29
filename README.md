@@ -12,6 +12,8 @@
 
 - image_font.html cssが画像とフォントサイズについての制御パターン
 
+- image_object.php object-fitのプロパティについて。主に画像比率を保ったままのセンタリング
+
 - main_visual.html メインキャッチ画像の固定方法などについて。backgroundがらみのプロパティ説明
 
 - main_visual2.html 大型の背景画像の固定方法について。

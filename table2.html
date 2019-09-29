@@ -2,9 +2,11 @@
 <html lang="ja">
 	<meta charset="UTF-8">
 	<title>table</title>　
-	<link rel="stylesheet" type="text/css" href="table2.css">
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="jquery.tablefix.js"></script>
+	<script type='text/javascript' src='./bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="table2.css">
 	<script type="text/javascript">
 	$(function() {
 		$('#items').tablefix({width: 800, height: 100, fixRows: 1});
@@ -136,5 +138,79 @@
 			</tbody>
 		</table>
 
+		<p>ヘッダ固定サンプルその3　cssオンリー(+bootstrap)</p>
+		<div class="container">
+		  <table class="table table-fixed">
+		    <thead>
+		      <tr>
+		        <th class="col-xs-3">First Name</th>
+		        <th class="col-xs-3">Last Name</th>
+		        <th class="col-xs-6">E-mail</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			  <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+		      <tr>
+		        <td class="col-xs-3">John</td>
+		        <td class="col-xs-3">Doe</td>
+		        <td class="col-xs-6">johndoe@email.com</td>
+		      </tr>
+			</tbody>
+		</table>
+		</div>
 	</body>
 </html>
