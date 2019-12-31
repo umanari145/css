@@ -16,48 +16,31 @@
 
 /** 固定パターン サンプル２ **/
 /* sticky table */
-.sticky_table {
+.sticky_table table {
   display: block;
-  overflow: hidden;
-  width: calc(100vw - 3.0rem);
-  /* fixed value */
-  height: 150px;
-  /* fixed value */
-  margin: 0 auto; }
-  .sticky_table table {
+  width: 500px;
+  height: 100%; }
+  .sticky_table table thead, .sticky_table table tbody {
+    display: block; }
+  .sticky_table table thead {
+    position: sticky; }
+  .sticky_table table tbody {
+    height: 300px;
+    overflow-y: scroll; }
+  .sticky_table table tr {
+    display: flex;
+    border-left: 1px solid #e67e22; }
+  .sticky_table table th, .sticky_table table td {
     display: block;
-    position: relative;
-    overflow: scroll;
-    width: 500px;
-    height: 100%;
-    border-collapse: collapse;
-    font-size: 0; }
-    .sticky_table table thead, .sticky_table table tbody {
-      display: block;
-      width: 100%; }
-    .sticky_table table tr {
-      display: flex; }
-    .sticky_table table th, .sticky_table table td {
-      display: block;
-      width: 25%;
-      background: #fff;
-      border: 1px solid #e67e22;
-      font-size: 1.0rem; }
-    .sticky_table table td {
-      height: auto; }
-    .sticky_table table tbody th {
-      position: sticky;
-      left: 0;
-      z-index: 1; }
-    .sticky_table table thead {
-      position: sticky;
-      top: 0;
-      z-index: 2; }
-    .sticky_table table thead th.blank {
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 3; }
+    width: 25%;
+    background: #fff;
+    border-right: 1px solid #e67e22;
+    font-size: 1.0rem; }
+  .sticky_table table th {
+    border-top: 1px solid #e67e22;
+    border-bottom: 2px solid #e67e22; }
+  .sticky_table table td {
+    border-bottom: 1px solid #e67e22; }
 
 .td3 {
   width: 25%; }
@@ -84,5 +67,3 @@
     float: left;
     background-color: #f39c12;
     border-color: #e67e22; }
-
-/*# sourceMappingURL=table2.css.map */

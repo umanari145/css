@@ -20,52 +20,39 @@
 /** 固定パターン サンプル２ **/
 /* sticky table */
 .sticky_table {
-  display: block;
-  overflow: hidden;
-  width: calc(100vw - 3.0rem); /* fixed value */
-  height: 150px; /* fixed value */
-  margin: 0 auto;
   table {
-    display: block;
-    position: relative;
-    overflow: scroll;
+	display: block;
     width: 500px;
     height: 100%;
-	border-collapse: collapse;
-    font-size: 0;
     thead, tbody {
       display: block;
-	  width: 100%;
-    }
+  	}
+	thead {
+      position: sticky;
+
+  	}
+  	tbody{
+      height: 300px;
+	  overflow-y: scroll;
+	}
 	tr{
-		display: flex;
+	  display: flex;
+	  border-left:1px solid #e67e22;
 	}
     th, td {
       display: block;
 	  width: 25%;
       background: #fff;
-	  border:1px solid #e67e22;
+	  border-right:1px solid #e67e22;
       font-size: 1.0rem;
     }
-	td{
-		height: auto;
+	th{
+	  border-top: 1px solid #e67e22;
+  	  border-bottom: 2px solid #e67e22;
 	}
-    tbody th {
-      position: sticky;
-      left: 0;
-      z-index: 1;
-    }
-    thead {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-    }
-    thead th.blank {
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 3;
-    }
+	td{
+      border-bottom: 1px solid #e67e22;
+	}
   }
 }
 
