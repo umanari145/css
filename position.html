@@ -4,12 +4,16 @@
     <title>position</title>
 	<link rel="stylesheet" type="text/css" href="position.css">
     <body>
+		yousoはabosokute top,leftは何も設定してないのでディフォルトで左上に張り付く
+		<br>oyayousoはrelative
 		<div class="rel1">
 			<div class="abs">youso</div>
 			oyayouso
 		</div>
 		<div style="width:100px;height:20px;"></div>
+
 		<p>インラインに対してpositionを使い、left要素がない場合、text-alignなどの影響を受ける可能性ある(ブラウザによって違う！)ので基本blockにすべし</p>
+		<p>oyayousoがtext-align:centerになっている以外は一段上と一緒
 		<div class="rel1">
 			<span class="abs">youso</span>
 			oyayouso
@@ -17,6 +21,7 @@
 
 		<div style="width:100px;height:20px;"></div>
 		<p>上要素(line_img)がposition:absoluteだと直下要素(block)がpositionなしでoverflow:hiddenだと効かない(はみ出てしまう)</p>
+		<p>この場合、line_imgの親は直親(class=block)ではなく、class="rel1"になる</p>
 		<div class="rel1" style="padding:1px">
 			<div class="block">
 				<div class="line_img"></div>
@@ -25,7 +30,7 @@
 
 		<div style="width:100px;height:20px;"></div>
 		<p>上要素(line_img)がposition:absoluteで直下要素(block)がpositionあればoverflow:hiddenがきく</p>
-		<p>ちなみに大親がrelativeで直親がabsoluteであっても直親が基準になる。(一段上の親にはならない)</p>
+		<p>ちなみに大親がrelativeで直親がabsoluteであっても直親が基準になる。positionがあれば基準が変わる(一段上の親にはならない)</p>
 		<div class="rel1" style="padding:1px">
 			<div class="block" style="position:absolute;top:30px;left:50%;margin-left:-50px;">
 				<div class="line_img" style="top:50px;"></div>
