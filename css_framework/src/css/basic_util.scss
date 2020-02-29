@@ -55,53 +55,30 @@ $ai2:'flex-end';
       justify-content: #{$jc2};
       align-items: #{$ai2};
     }
+    //メディアクエリ用
+    .mq_#{$jc}_#{$ai}{
+      justify-content: #{$jc2};
+      align-items: #{$ai2};
+    }
   }
 }
 
-
-
-//
-.cols{
-  @extend .columns;
-  @extend .is-paddingless;
-  @extend .is-marginless;
-}
-
-.col{
-  @extend .column;
-  @extend .is-paddingless;
-  @extend .is-marginless;
-}
-
-//%幅を持ったカラム
-@for $i from 1 through 12 {
-  .col_w#{$i} {
-    @extend .column;
-    @extend .is-paddingless;
-    @extend .is-#{$i};
-
-  }
-
-  .col_w#{$i}_p {
-    @extend .column;
-    @extend .is-#{$i};
-  }
+.f_eq {
+  flex:1 1 0;
 }
 
 .w_auto{
   width: auto !important;
 }
 
-.input_auto{
-  @extend .input;
-  width: auto;
-}
-
-
 .h_auto{
   height: auto !important;
 }
 
+.centering{
+    margin-right: auto;
+    margin-left: auto;
+}
 
 @for $i from 1 through 20 {
   $size:$i * 5;
@@ -152,15 +129,205 @@ $t2:'right';
         vertical-align: #{$v2} !important;
         text-align: #{$t2} !important;
     }
+    .va_#{$v} {
+        vertical-align: #{$v2} !important;
+    }
+    .ta_#{$t} {
+        text-align: #{$t2} !important;
+    }
   }
 }
 
+//bulmaがあれば
+.cols{
+  @extend .columns;
+  @extend .is-paddingless;
+  @extend .is-marginless;
+}
 
+//bulmaがあれば
+.col{
+  @extend .column;
+  @extend .is-paddingless;
+  @extend .is-marginless;
+}
 
-.f_eq {
-  flex:1 1 0;
+//bulmaがあれば
+//%幅を持ったカラム
+@for $i from 1 through 12 {
+.col_w#{$i} {
+  @extend .column;
+  @extend .is-paddingless;
+  @extend .is-#{$i};
+}
+
+//bulmaがあれば
+.col_w#{$i}_p {
+  @extend .column;
+  @extend .is-#{$i};
 }
 
 .d-no{
   display: none !important;
+}
+
+/**scroll_table**/
+.scroll_table_wrapper{
+    display: block;
+    .scroll_head{
+        display: block;
+        position: sticky;
+    }
+    .scroll_body{
+        display: block;
+        overflow-y: scroll;
+    }
+    tr{
+        display: flex;
+    }
+    th,td{
+        display: block;
+    }
+}
+
+/**等間隔**/
+.scroll_table_wrapper_eq {
+    @extend .scroll_table_wrapper;
+    th,td{
+        width: 100%;
+    }
+}
+
+/**loading**/
+.loading_bg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.7;
+	background: #fff;
+	z-index: 10000;
+    img{
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	margin-left: -50px;
+    	margin-top: -50px;
+    }
+}
+
+/**オリジナルのモーダル**/
+@mixin modal-overlay($bg:#000, $opacity:0.6, $z-index:9999){
+    position: fixed;
+    z-index:$z-index;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: $bg;
+    opacity: $opacity;
+}
+
+@mixin modal-window($bg:#fff, $top:5%, $left:5%, $width:90%, $height:90%, $br:4px, $z-index:10000) {
+    position:absolute;
+    z-index: $z-index;
+    top:$top;
+    left:$left;
+    width: $width;
+    height: $height;
+    background: $bg;
+    border-radius: $br;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+@mixin modal-header($padding: 15px) {
+    padding: $padding;
+    border-bottom: 1px solid #ddd;
+}
+
+@mixin modal-inner($mt:0px, $width:100%, $height:70%) {
+    margin-top: $mt;
+    margin-right: auto;
+    margin-left: auto;
+    width: $width;
+    height: $height;
+    overflow-y: scroll;
+}
+
+@mixin modal-footer($padding: 15px) {
+    padding: $padding;
+    border-top: 1px solid #ddd;
+}
+
+.modal-overlay{
+    @include modal-overlay;
+}
+
+.modal-window{
+    @include modal-window;
+    .modal-header{
+        @include modal-header;
+    }
+    .modal-inner{
+        @include modal-inner;
+    }
+    .modal-footer{
+        @include modal-footer;
+    }
+}
+
+/**mediaquery**/
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 399px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// @mixinの定義
+@mixin mqdown($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mqup($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+//携帯の時だけ隠す
+.d-no-sp{
+    @include mqdown(md){
+        display: none !important;
+    }
+}
+
+//pcの時だけ隠す
+.d-no-pc{
+    @include mqup(md){
+        display: none !important;
+    }
+}
+
+//携帯の時だけ隠す
+.flex-sp{
+    @include mqdown(md){
+        display: flex !important;
+    }
+}
+
+//pcの時だけ隠す
+.flex-pc{
+    @include mqup(md){
+        display: flex !important;
+    }
 }
