@@ -227,6 +227,7 @@ $t2:'right';
     height: 100%;
     background: $bg;
     opacity: $opacity;
+    display: none;
 }
 
 @mixin modal-window($bg:#fff, $top:5%, $left:5%, $width:90%, $height:90%, $br:4px, $z-index:10000) {
@@ -239,6 +240,7 @@ $t2:'right';
     background: $bg;
     border-radius: $br;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display: none;
 }
 @mixin modal-header($padding: 15px) {
     padding: $padding;
@@ -318,16 +320,30 @@ $breakpoint-up: (
     }
 }
 
-//携帯の時だけ隠す
+//携帯の時だけflex
 .flex-sp{
     @include mqdown(md){
         display: flex !important;
     }
 }
 
-//pcの時だけ隠す
+//pcの時だけflex
 .flex-pc{
     @include mqup(md){
         display: flex !important;
+    }
+}
+
+//携帯の時だけinline-block
+.flex-sp{
+    @include mqdown(md){
+        display: inline-block !important;
+    }
+}
+
+//pcの時だけinline-block
+.flex-pc{
+    @include mqup(md){
+        display: inline-block !important;
     }
 }
