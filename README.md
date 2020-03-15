@@ -28,7 +28,9 @@
 
 - table.html tableについて。各幅のロジックがどのように決まるかなど
 
-- table2.html 固定テーブルの挙動について JSのライブラリ(jquery.tablefix.js)とcssを使ったパターンに関して
+- table.html tableのborderのコツについて。
+
+- table2.html ヘッダー固定テーブルの挙動について JSのライブラリ(jquery.tablefix.js)とcssを使ったパターンに関して
 
 - vertical.html テーブルの中央よせに関して
 

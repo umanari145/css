@@ -1,0 +1,40 @@
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+
+    tr{
+    	border-top:1px solid #000;
+    	border-left:1px solid #000;
+    	border-right:1px solid #000;
+        &:last-child{
+    	    border-bottom: 1px solid #000;
+        }
+
+        &.last_normal_repayment{
+        	border-bottom: 4px double #000;
+        }
+
+        &.repayment_offset{
+    	    border-top:none;
+        }
+
+        &.last_offset{
+    	    border-bottom: 4px double #000;
+        }
+
+        td,th{
+    	    border-right:1px solid #000;
+            &:first-child{
+        	    border-left:1px solid #000;
+            }
+        }
+
+        .b_r_none{
+    	    border-right: none !important;
+        }
+
+        .b_r_dot{
+        	border-right: 1px dotted #000 !important;
+        }
+    }
+}
