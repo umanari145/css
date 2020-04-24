@@ -29,7 +29,6 @@ html{
 }
 
 
-
 /** radio **/
 .hidden_box_radio .hidden_show {
     height: 0;
@@ -69,6 +68,39 @@ html{
     height: auto;
     opacity: 1;
 }
+
+.type_ul li{
+	list-style-type: none;
+}
+
+.type_list{
+	display: none;
+}
+
+.type_list+label{
+	display: inline-block;
+	position: relative;
+	padding-left: 40px;
+	width: 200px;
+}
+
+.type_list:checked + label{
+	background-color: #FFC0CB;
+}
+
+.type_list:checked + label::before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top:6px;
+	left:13px;
+	height: 3px;
+	width: 7px;
+	border-left: 3px solid #ff0000;
+	border-bottom: 3px solid #ff0000;
+	transform: rotate(-45deg);
+}
+
 
 </style>
 <script>
@@ -127,5 +159,19 @@ $(function(){
 			<!--ここまで-->
 			</div>
 		</div>
+
+		<p>様々なcheckbox</p>
+		<ul class="type_ul">
+			<li><input type="checkbox" id="tokyo" class="type_list"><label for="tokyo">東京</label></li>
+			<li><input type="checkbox" id="chiba" class="type_list"><label for="chiba">千葉</label></li>
+			<li><input type="checkbox" id="kanagawa" class="type_list"><label for="kanagawa">神奈川</label></li>
+		</ul>
+
+		<p>もっと色々なパターンは下記のリンク参照</p>
+		<p>
+			<a href="https://kodocode.net/design-css-checkbox/">
+				https://kodocode.net/design-css-checkbox/
+			</a>
+		</p>
 	</body>
 </html>
