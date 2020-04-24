@@ -1,23 +1,23 @@
-.table {
+table {
   table-layout: fixed;
   border-collapse: collapse; }
-  .table tr {
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000; }
-    .table tr:last-child {
-      border-bottom: 1px solid #000; }
-    .table tr.last_normal_repayment {
-      border-bottom: 4px double #000; }
-    .table tr.repayment_offset {
+  table tr {
+    border-top: 1px dotted #000;
+    border-left: 1px dotted #000;
+    border-right: 1px dotted #000; }
+    table tr:last-child {
+      border-bottom: 1px dotted #000; }
+    table tr.last_normal_repayment {
+      border-bottom: 4px dotted #000; }
+    table tr.repayment_offset {
       border-top: none; }
-    .table tr.last_offset {
-      border-bottom: 4px double #000; }
-    .table tr td, .table tr th {
-      border-right: 1px solid #000; }
-      .table tr td:first-child, .table tr th:first-child {
-        border-left: 1px solid #000; }
-    .table tr .b_r_none {
+    table tr.last_offset {
+      border-bottom: 4px dotted #000; }
+    table tr td, table tr th {
+      border-right: 1px dotted #000; }
+      table tr td:first-child, table tr th:first-child {
+        border-left: 1px dotted #000; }
+    table tr .b_r_none {
       border-right: none !important; }
-    .table tr .b_r_dot {
+    table tr .b_r_dot {
       border-right: 1px dotted #000 !important; }
