@@ -34,8 +34,6 @@
 
 - vertical.html テーブルの中央よせに関して
 
-- gulpfile.js gulpを使った(less,sass,ejs)コンパイルに関して
-
 - prohazusample 書籍「プロとして恥ずかしくない新CSSデザインの大原則」のソース。比較的オーソドックスなページのレイアウトについて
 
 - sample/index.html 比較的小ネタ的なCSSについて。書籍「初めてのCSS設計」ネタ多し。またカスタマイズされたチェックボックスなど。
@@ -65,36 +63,72 @@ npx tailwind build tailwind.css -c tailwind.js -o output.css
 
 - bulma bulmaを使ったhtmlのサンプル
 
-## bowerインストール
+## セットアップ（2025年版 - Gulp廃止）
 
-bower.jsonに記述されたライブラリを読み込み
+### npmインストール
 
-```
-bower install
-```
+package.jsonに記述されたライブラリの読み込み
 
-## npmインストール
-
-package.jsonに記述されたラリブラリの読み込み
-
-```
+```bash
 npm install
 ```
-### npmスクリプトの活用
 
-package.jsonのscriptに書かれたものが走る
+### ビルドコマンド
+
+package.jsonのscriptに書かれたコマンドで各種ファイルをコンパイル
+
+```bash
+# すべてのファイルをビルド（LESS, SASS, EJS, カスタムCSS）
+npm run build
+
+# ファイル監視モード（開発用）- 変更を自動検知してビルド
+npm start
+
+# 個別ビルド
+npm run build:less    # LESSのコンパイル
+npm run build:sass    # SASSのコンパイル（Bulma）
+npm run build:ejs     # EJSのコンパイル
+npm run build:custom  # カスタムCSSのビルド（Bootstrap用）
 ```
-npm run test
 
-npm run css
+### 使用技術（2025年版）
+
+- **Dart Sass**: node-sassの代わりに最新のSassコンパイラを使用
+- **Bootstrap 5.3**: 最新のBootstrapフレームワーク
+- **Bulma 1.0**: 最新のBulmaフレームワーク
+- **PostCSS + Autoprefixer**: ベンダープレフィックスの自動付与
+- **chokidar-cli**: ファイル監視（Gulp不要）
+- **npm-run-all**: 複数のnpmスクリプトを並列実行
+
+
+
+## Docker環境（2025年版）
+
+最新のNode.js環境で実行
+
+```bash
+# コンテナ起動（自動的にnpm install & npm startを実行）
+docker-compose up -d
+
+# ログを確認
+docker-compose logs -f
+
+# コンテナに入る
+docker-compose exec node bash
+
+# コンテナ内でコマンド実行
+docker-compose exec node npm run build
+
+# 停止
+docker-compose down
 ```
 
+### ローカル環境での実行
 
-### gulpの活用
+Dockerを使わない場合は、Node.js 18以上をインストール後：
 
+```bash
+npm install
+npm start  # 開発モード（ファイル監視）
+npm run build  # ビルドのみ
 ```
-npm run gulp (タスク名)
-```
-
-上記のタスク名はgulpfile.jsの記述を参考に。
-gulp.task(・・・)　ここがタスク名になる
